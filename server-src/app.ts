@@ -1,5 +1,5 @@
 import * as express from 'express';
-import * as routes from './routes';
+import { appMiddleware } from './middleware';
 import { apiRouter } from './routes';
 
 class App {
@@ -11,12 +11,7 @@ class App {
   }
 
   private mountRoutes(): void {
-    // const router = express.Router();
-    // router.get('/', (req, res) => {
-    //   res.json({
-    //     message: 'Hello World!',
-    //   });
-    // });
+    this.express.use(appMiddleware(this.express));
     this.express.use('/api', apiRouter);
   }
 }
