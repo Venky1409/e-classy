@@ -2,13 +2,19 @@
   "name": "e-classy",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server-dist/server.js",
   "scripts": {
-    "start": "node ./server-dist/server",
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node server-dist/server.js",
+    "watch-node": "nodemon server-dist/server.js",
+    "watch-ts": "tsc -w"
   },
-  "author": "",
+  "engines": {
+    "node": "8.11.4"
+  },
+  "author": "INNOWEEN TECHIES",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.13.0",
