@@ -2,12 +2,15 @@ import * as mongoose from 'mongoose';
 import { Request, Response } from 'express';
 import { CategorySchema } from './categories.model';
 
-const Category = mongoose.model('Category', CategorySchema);
+const Category = mongoose.model('categories', CategorySchema);
 
 class CategoryController {
 
     public addNewCategory(req: Request, res: Response) {
-        let newCategory = new Category(req.body);
+        let category = req.body;
+        let newCategory = new Category({
+            categoryname: category.categoryname
+        });
 
         newCategory.save((err, contact) => {
             if (err) {
@@ -18,12 +21,13 @@ class CategoryController {
     }
 
     public getAllCategories(req: Request, res: Response) {
-        Category.save((err, contact) => {
+        Category.find((err, categories) => {
             if (err) {
                 res.send(err);
             }
-            res.json({
-
+            res.status(200).json({
+                status: 200,
+                data: categories
             });
         });
     }

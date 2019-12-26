@@ -6,7 +6,8 @@ import SubChildCategoryModule from '../../admin/subchildcategories';
 let router = Router();
 
 router.route('/categories')
-    .get(CategoryModule.testcats);
+    .get(CategoryModule.getcategories)
+    .post(CategoryModule.addcategory);
 
 router.route('/categories/subcategories')
 .get(SubCategoryModule.testcats);

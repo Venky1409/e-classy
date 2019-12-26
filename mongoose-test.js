@@ -1,3 +1,6 @@
+
+
+// https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example
 const connectionString = "mongodb+srv://admin:admin@eclassycluster-wfo6k.mongodb.net/dbeclassy?retryWrites=true&w=majority";
 const mongoose = require("mongoose");
 
