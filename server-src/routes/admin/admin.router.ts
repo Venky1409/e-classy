@@ -2,6 +2,7 @@ import { Router } from 'express';
 import CategoryModule from '../../admin/categories';
 import SubCategoryModule from '../../admin/subcategories';
 import SubChildCategoryModule from '../../admin/subchildcategories';
+import OrderModule from '../../admin/orders';
 
 let router = Router();
 
@@ -14,6 +15,12 @@ router.route('/categories/subcategories')
 
 router.route('/categories/subcategories/subchildcategories')
 .get(SubChildCategoryModule.testcats);
+
+router.route('/orders')
+.get(OrderModule.getorders);
+
+router.route('/orders/:id')
+.get(OrderModule.getorders);
 
 
 export let adminRouter = router;
