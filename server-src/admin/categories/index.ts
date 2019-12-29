@@ -1,15 +1,15 @@
 import CategoryController from './categories.controller';
 
 class CategoryModule {
-  getcategories: any;
-  testcats: any;
-  addcategory: any;
 
-  constructor() {
-    this.testcats = CategoryController.testCats;
-    this.addcategory = CategoryController.addNewCategory;
-    this.getcategories = CategoryController.getAllCategories;
-  }
+  testcats = CategoryController.testCats;
+  addcategory = CategoryController.post;
+  getcategories = CategoryController.get;
+  findById = CategoryController.findById;
+  delete = CategoryController.delete;
+  update = CategoryController.update;
+
+  constructor() {}
 }
 
 export default new CategoryModule();

@@ -6,7 +6,7 @@ const Category = mongoose.model('categories', CategorySchema);
 
 class CategoryController {
 
-    public addNewCategory(req: Request, res: Response) {
+    public post(req: Request, res: Response) {
         let category = req.body;
         let newCategory = new Category({
             categoryname: category.categoryname
@@ -20,7 +20,7 @@ class CategoryController {
         });
     }
 
-    public getAllCategories(req: Request, res: Response) {
+    public get(req: Request, res: Response) {
         Category.find((err, categories) => {
             if (err) {
                 res.send(err);
@@ -28,6 +28,38 @@ class CategoryController {
             res.status(200).json({
                 status: 200,
                 data: categories
+            });
+        });
+    }
+
+    public findById(req: Request, res: Response) {
+        Category.findById(req.params.id, function (err, data) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: data
+            });
+        });
+    }
+
+    public update(req: Request, res: Response) {
+        Category.findOneAndUpdate({ _id: req.params.id }, {
+            $set: req.body
+        }, { useFindAndModify: false }, function (err, post) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: post
+            });
+        });
+    }
+
+    public delete(req: Request, res: Response) {
+        Category.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: post
             });
         });
     }

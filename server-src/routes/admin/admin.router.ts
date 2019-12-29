@@ -10,11 +10,16 @@ router.route('/categories')
     .get(CategoryModule.getcategories)
     .post(CategoryModule.addcategory);
 
+router.route('/categories/:id?')
+    .get(CategoryModule.findById)
+    .put(CategoryModule.update)
+    .delete(CategoryModule.delete);
+
 router.route('/categories/subcategories')
-.get(SubCategoryModule.testcats);
+    .get(SubCategoryModule.testcats);
 
 router.route('/categories/subcategories/subchildcategories')
-.get(SubChildCategoryModule.testcats);
+    .get(SubChildCategoryModule.testcats);
 
 router.route('/orders')
 .get(OrderModule.getorders);
