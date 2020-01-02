@@ -6,26 +6,30 @@ import OrderModule from '../../admin/orders';
 
 let router = Router();
 
+// Categories Routes
 router.route('/categories')
     .get(CategoryModule.getcategories)
     .post(CategoryModule.addcategory);
-
 router.route('/categories/:id?')
     .get(CategoryModule.findById)
     .put(CategoryModule.update)
     .delete(CategoryModule.delete);
 
-router.route('/categories/subcategories')
-    .get(SubCategoryModule.testcats);
+// Categories Routes
+router.route('/subcategories')
+    .post(SubCategoryModule.saveSubCategory);
+router.route('/subcategories/:id?')
+    .get(SubCategoryModule.subCategoriesByCategoryId)
+    .delete(SubCategoryModule.delete);
 
 router.route('/categories/subcategories/subchildcategories')
     .get(SubChildCategoryModule.testcats);
 
 router.route('/orders')
-.get(OrderModule.getorders);
+    .get(OrderModule.getorders);
 
 router.route('/orders/:id')
-.get(OrderModule.getorders);
+    .get(OrderModule.getorders);
 
 
 export let adminRouter = router;
