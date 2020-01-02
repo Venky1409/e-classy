@@ -1,11 +1,11 @@
 import SubCategoryController from './subcategories.controller';
 
 class SubCategoryModule {
-  testcats: any;
+  saveSubCategory = SubCategoryController.SaveSubCategory;
+  subCategoriesByCategoryId = SubCategoryController.SubCategoriesByCategoryId;
+  delete = SubCategoryController.delete;
 
-  constructor() {
-    this.testcats = SubCategoryController.testCats
-  }
+  constructor() { }
 }
 
 export default new SubCategoryModule();

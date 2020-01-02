@@ -2,11 +2,11 @@ import * as mongoose from 'mongoose';
 import { Request, Response } from 'express';
 import { SubCategorySchema } from './subcategories.model';
 
-const SubCategory = mongoose.model('SubCategory', SubCategorySchema);
+const SubCategory = mongoose.model('subcategories', SubCategorySchema);
 
 class SubCategoryController {
 
-    public addNewSubCategory(req: Request, res: Response) {
+    public SaveSubCategory(req: Request, res: Response) {
         let newSubCategory = new SubCategory(req.body);
 
         newSubCategory.save((err, contact) => {
@@ -17,23 +17,23 @@ class SubCategoryController {
         });
     }
 
-    public getAllCategories(req: Request, res: Response) {
-        SubCategory.save((err, contact) => {
-            if (err) {
-                res.send(err);
-            }
-            res.json({
-
+    public SubCategoriesByCategoryId(req: Request, res: Response) {
+        SubCategory.find({ categoryid: req.params.id }, function (err, data) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: data
             });
         });
     }
 
-    public testCats(req: Request, res: Response) {
-        res.json({
-            subcategories: [{
-                id: 1,
-                name: 'I phone'
-            }]
+    public delete(req: Request, res: Response) {
+        SubCategory.findByIdAndRemove(req.params.id, function (err, post) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: post
+            });
         });
     }
 }

@@ -19,7 +19,7 @@ class App {
 
   private mountRoutes(): void {
     this.express.use(appMiddleware(this.express));
-    this.express.use('/api', apiRouter);
+    this.express.use('/api/v1', apiRouter);
   }
 
   private mongoSetup() {
