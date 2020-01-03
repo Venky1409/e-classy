@@ -27,6 +27,18 @@ class SubCategoryController {
         });
     }
 
+    public update(req: Request, res: Response) {
+        SubCategory.findOneAndUpdate({ _id: req.params.id }, {
+            $set: req.body
+        }, { useFindAndModify: false }, function (err, post) {
+            if (err) return res.send(err);
+            res.status(200).json({
+                status: 200,
+                data: post
+            });
+        });
+    }
+
     public delete(req: Request, res: Response) {
         SubCategory.findByIdAndRemove(req.params.id, function (err, post) {
             if (err) return res.send(err);

@@ -15,19 +15,24 @@ router.route('/categories/:id?')
     .put(CategoryModule.update)
     .delete(CategoryModule.delete);
 
-// Categories Routes
+// SubCategories Routes
 router.route('/subcategories')
     .post(SubCategoryModule.saveSubCategory);
 router.route('/subcategories/:id?')
     .get(SubCategoryModule.subCategoriesByCategoryId)
+    .put(SubCategoryModule.update)
     .delete(SubCategoryModule.delete);
 
-router.route('/categories/subcategories/subchildcategories')
-    .get(SubChildCategoryModule.testcats);
+// SubChildCategories Routes
+router.route('/subchildcategories')
+    .post(SubChildCategoryModule.saveSubChildCategory);
+router.route('/subchildcategories/:id?')
+    .get(SubChildCategoryModule.subChildCategoriesBySubCategoryId)
+    .put(SubChildCategoryModule.update)
+    .delete(SubChildCategoryModule.delete);
 
 router.route('/orders')
     .get(OrderModule.getorders);
-
 router.route('/orders/:id')
     .get(OrderModule.getorders);
 
