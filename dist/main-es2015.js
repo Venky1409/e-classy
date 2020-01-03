@@ -32,7 +32,20 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <app-side-bar></app-side-bar>\n  <div class=\"page-container\">\n    <app-header></app-header>\n    <router-outlet></router-outlet>\n    <app-footer></app-footer>\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"wrapper\">\r\n  <app-side-bar></app-side-bar>\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <app-header></app-header>\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </div>\r\n</div>\r\n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2>HELLO WELCOME</h2>");
 
 /***/ }),
 
@@ -45,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<footer class=\"bdT ta-c p-30 lh-0 fsz-sm c-grey-600\">\r\n    <span>Copyright © 2019 Designed by <a href=\"#\" target='_blank' title=\"E-Classy\">Colorlib</a>. All rights reserved.</span>\r\n</footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <footer class=\"bdT ta-c p-30 lh-0 fsz-sm c-grey-600\">\r\n    <span>Copyright © 2019 Designed by <a href=\"#\" target='_blank' title=\"E-Classy\">Colorlib</a>. All rights reserved.</span>\r\n</footer> -->\r\n<footer class=\"sticky-footer bg-white\">\r\n    <div class=\"container my-auto\">\r\n      <div class=\"copyright text-center my-auto\">\r\n        <span>Copyright &copy; Your Website 2019</span>\r\n      </div>\r\n    </div>\r\n  </footer>");
 
 /***/ }),
 
@@ -58,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header navbar\">\r\n    <div class=\"header-container\">\r\n      <ul class=\"nav-left\">\r\n        <li>\r\n          <a id='sidebar-toggle' class=\"sidebar-toggle\" href=\"javascript:void(0);\">\r\n            <i class=\"ti-menu\"></i>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n      <ul class=\"nav-right\">\r\n        <li class=\"dropdown\">\r\n          <a href=\"\" class=\"dropdown-toggle no-after peers fxw-nw ai-c lh-1\" data-toggle=\"dropdown\">\r\n            <div class=\"peer mR-10\">\r\n              <img class=\"w-2r bdrs-50p\" src=\"https://randomuser.me/api/portraits/men/10.jpg\" alt=\"\">\r\n            </div>\r\n            <div class=\"peer\">\r\n              <span class=\"fsz-sm c-grey-900\">Admin</span>\r\n            </div>\r\n          </a>\r\n          <ul class=\"dropdown-menu fsz-sm\">\r\n            <li>\r\n              <a href=\"\" class=\"d-b td-n pY-5 bgcH-grey-100 c-grey-700\">\r\n                <i class=\"ti-power-off mR-10\"></i>\r\n                <span>Logout</span>\r\n              </a>\r\n            </li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n  <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n    <!-- Sidebar Toggle (Topbar) -->\r\n    <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n      <i class=\"fa fa-bars\"></i>\r\n    </button>\r\n\r\n    <!-- Topbar Navbar -->\r\n    <ul class=\"navbar-nav ml-auto\">\r\n      <div class=\"topbar-divider d-none d-sm-block\"></div>\r\n\r\n      <!-- Nav Item - User Information -->\r\n      <li class=\"nav-item dropdown no-arrow\">\r\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Admin</span>\r\n          <img class=\"img-profile rounded-circle\" src=\"https://source.unsplash.com/QAB-WJcbgJk/60x60\">\r\n        </a>\r\n        <!-- Dropdown - User Information -->\r\n        <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>\r\n            Profile\r\n          </a>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>\r\n            Settings\r\n          </a>\r\n          <a class=\"dropdown-item\" href=\"#\">\r\n            <i class=\"fas fa-list fa-sm fa-fw mr-2 text-gray-400\"></i>\r\n            Activity Log\r\n          </a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\" data-toggle=\"modal\" data-target=\"#logoutModal\">\r\n            <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>\r\n            Logout\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n    </ul>\r\n\r\n  </nav>");
 
 /***/ }),
 
@@ -71,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sidebar\">\r\n    <div class=\"sidebar-inner\">\r\n      <!-- ### $Sidebar Header ### -->\r\n      <div class=\"sidebar-logo\">\r\n        <div class=\"peers ai-c fxw-nw\">\r\n          <div class=\"peer peer-greed\">\r\n            <a class=\"sidebar-link td-n\" href=\"#\">\r\n              <div class=\"peers ai-c fxw-nw\">\r\n                <div class=\"peer\">\r\n                  <div class=\"logo\">\r\n                    <img src=\"assets/static/images/logo.png\" alt=\"\">\r\n                  </div>\r\n                </div>\r\n                <div class=\"peer peer-greed\">\r\n                  <h5 class=\"lh-1 mB-0 logo-text\">Admin page</h5>\r\n                </div>\r\n              </div>\r\n            </a>\r\n          </div>\r\n          <div class=\"peer\">\r\n            <div class=\"mobile-toggle sidebar-toggle\">\r\n              <a href=\"\" class=\"td-n\">\r\n                <i class=\"ti-arrow-circle-left\"></i>\r\n              </a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- ### $Sidebar Menu ### -->\r\n      <ul class=\"sidebar-menu scrollable pos-r\">\r\n        <li class=\"nav-item dropdown\">\r\n            <a class=\"dropdown-toggle\" href=\"javascript:void(0);\">\r\n              <span class=\"icon-holder\">\r\n                <i class=\"c-orange-500 ti-layout-list-thumb\"></i>\r\n              </span>\r\n              <span class=\"title\">Category Management</span>\r\n              <span class=\"arrow\">\r\n                <i class=\"ti-angle-right\"></i>\r\n              </span>\r\n            </a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li>\r\n                <a class='sidebar-link' href=\"#\">Categories</a>\r\n              </li>\r\n              <li>\r\n                <a class='sidebar-link' href=\"#\">Sub Categories</a>\r\n              </li>\r\n              <li>\r\n                <a class='sidebar-link' href=\"#\">Sub Child Categories</a>\r\n              </li>\r\n            </ul>\r\n          </li>\r\n        <li class=\"nav-item\">\r\n          <a class='sidebar-link' href=\"#\">\r\n            <span class=\"icon-holder\">\r\n              <i class=\"c-light-blue-500 ti-pencil\"></i>\r\n            </span>\r\n            <span class=\"title\">Forms</span>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("  <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n    <!-- Sidebar - Brand -->\r\n    <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"#\">\r\n      <div class=\"sidebar-brand-icon rotate-n-15\">\r\n        <i class=\"fas fa-laugh-wink\"></i>\r\n      </div>\r\n      <div class=\"sidebar-brand-text mx-3\">E-Classy</div>\r\n    </a>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider my-0\">\r\n\r\n    <!-- Nav Item - Dashboard -->\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"index.html\">\r\n        <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n        <span>Dashboard</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Profile\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Category Management</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" href=\"#\">Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Child Categories</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Addons\r\n    </div>\r\n\r\n    <!-- Nav Item - Charts -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-chart-area\"></i>\r\n        <span>Charts</span></a>\r\n    </li>\r\n\r\n    <!-- Nav Item - Tables -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-table\"></i>\r\n        <span>Tables</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n    <!-- Sidebar Toggler (Sidebar) -->\r\n    <div class=\"text-center d-none d-md-inline\">\r\n      <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n    </div>\r\n\r\n  </ul>");
 
 /***/ }),
 
@@ -365,7 +378,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/sidebar/sidebar.component.ts");
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
@@ -379,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const appRoutes = [
-    { path: "", component: _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"] },
+    { path: "", component: _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"] },
 ];
 let AppModule = class AppModule {
 };
@@ -389,20 +404,62 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
             _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"],
             _header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"]
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"],
+            _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_10__["RouterModule"].forRoot(appRoutes, { useHash: false }),
+            _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, { useHash: false }),
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/categories/categories.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/categories/categories.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhdGVnb3JpZXMvY2F0ZWdvcmllcy5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/categories/categories.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/categories/categories.component.ts ***!
+  \****************************************************/
+/*! exports provided: CategoriesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoriesComponent", function() { return CategoriesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let CategoriesComponent = class CategoriesComponent {
+};
+CategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-categories',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./categories.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./categories.component.css */ "./src/app/categories/categories.component.css")).default]
+    })
+], CategoriesComponent);
 
 
 

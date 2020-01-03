@@ -9,11 +9,12 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { RouterModule, Routes } from "@angular/router";
 import { from } from 'rxjs';
 
 const appRoutes: Routes = [
-  { path: "", component: AppComponent },
+  { path: "", component: CategoriesComponent },
 ];
 
 @NgModule({
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
