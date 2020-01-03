@@ -1,3 +1,7 @@
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
@@ -47,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"wrapper\">\r\n  <app-side-bar></app-side-bar>\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <app-header></app-header>\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </div>\r\n</div>\r\n  ";
+    __webpack_exports__["default"] = "<div id=\"wrapper\">\r\n  <app-side-bar></app-side-bar>\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <app-header></app-header>\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n    <div toastContainer></div>\r\n  </div>\r\n</div>\r\n  ";
     /***/
   },
 
@@ -67,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<h2>HELLO WELCOME</h2>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME CATEGORY PAGE</h2>";
     /***/
   },
 
@@ -112,6 +116,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html":
+  /*!********************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html ***!
+    \********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppHomeHomeComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<h2>Home page</h2>";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/sidebar/sidebar.component.html":
   /*!**************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/sidebar/sidebar.component.html ***!
@@ -127,7 +151,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "  <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n    <!-- Sidebar - Brand -->\r\n    <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"#\">\r\n      <div class=\"sidebar-brand-icon rotate-n-15\">\r\n        <i class=\"fas fa-laugh-wink\"></i>\r\n      </div>\r\n      <div class=\"sidebar-brand-text mx-3\">E-Classy</div>\r\n    </a>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider my-0\">\r\n\r\n    <!-- Nav Item - Dashboard -->\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"index.html\">\r\n        <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n        <span>Dashboard</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Profile\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Category Management</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" href=\"#\">Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Child Categories</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Addons\r\n    </div>\r\n\r\n    <!-- Nav Item - Charts -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-chart-area\"></i>\r\n        <span>Charts</span></a>\r\n    </li>\r\n\r\n    <!-- Nav Item - Tables -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-table\"></i>\r\n        <span>Tables</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n    <!-- Sidebar Toggler (Sidebar) -->\r\n    <div class=\"text-center d-none d-md-inline\">\r\n      <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n    </div>\r\n\r\n  </ul>";
+    __webpack_exports__["default"] = "  <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n    <!-- Sidebar - Brand -->\r\n    <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"#\">\r\n      <div class=\"sidebar-brand-icon rotate-n-15\">\r\n        <i class=\"fas fa-laugh-wink\"></i>\r\n      </div>\r\n      <div class=\"sidebar-brand-text mx-3\">E-Classy</div>\r\n    </a>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider my-0\">\r\n\r\n    <!-- Nav Item - Dashboard -->\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n        <span>Dashboard</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Profile\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Category Management</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" routerLink=\"/categories\" routerLinkActive=\"active\">Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Categories</a>\r\n          <a class=\"collapse-item\" href=\"#\">Sub Child Categories</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Addons\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUtilities\" aria-expanded=\"true\" aria-controls=\"collapseUtilities\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Utilities</span>\r\n      </a>\r\n      <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <h6 class=\"collapse-header\">Custom Utilities:</h6>\r\n          <a class=\"collapse-item\" href=\"#\">Colors</a>\r\n          <a class=\"collapse-item\" href=\"#\">Borders</a>\r\n          <a class=\"collapse-item\" href=\"#\">Animations</a>\r\n          <a class=\"collapse-item\" href=\"#\">Other</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <!-- Nav Item - Charts -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-chart-area\"></i>\r\n        <span>Charts</span></a>\r\n    </li>\r\n\r\n    <!-- Nav Item - Tables -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-table\"></i>\r\n        <span>Tables</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n    <!-- Sidebar Toggler (Sidebar) -->\r\n    <div class=\"text-center d-none d-md-inline\">\r\n      <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n    </div>\r\n\r\n  </ul>";
     /***/
   },
 
@@ -815,43 +839,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./app.component */
     "./src/app/app.component.ts");
     /* harmony import */
 
 
-    var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./sidebar/sidebar.component */
     "./src/app/sidebar/sidebar.component.ts");
     /* harmony import */
 
 
-    var _header_header_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./header/header.component */
     "./src/app/header/header.component.ts");
     /* harmony import */
 
 
-    var _footer_footer_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./footer/footer.component */
     "./src/app/footer/footer.component.ts");
     /* harmony import */
 
 
-    var _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./categories/categories.component */
     "./src/app/categories/categories.component.ts");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./home/home.component */
+    "./src/app/home/home.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _services_categories_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ./services/categories.service */
+    "./src/app/services/categories.service.ts");
 
     var appRoutes = [{
       path: "",
-      component: _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"]
+      component: _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]
+    }, {
+      path: "categories",
+      component: _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"]
     }];
 
     var AppModule = function AppModule() {
@@ -859,12 +904,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_8__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_9__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_10__["CategoriesComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, {
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_13__["RouterModule"].forRoot(appRoutes, {
         useHash: false
-      })],
-      providers: [],
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]],
+      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot({
+        positionClass: 'toast-bottom-right',
+        timeOut: 0,
+        closeButton: true // show close button
+
+      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"]],
+      providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_14__["CategoryService"]],
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })], AppModule);
     /***/
@@ -921,9 +971,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
 
-    var CategoriesComponent = function CategoriesComponent() {
-      _classCallCheck(this, CategoriesComponent);
+
+    var _services_categories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../services/categories.service */
+    "./src/app/services/categories.service.ts");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ngx-toastr */
+    "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
+    var CategoriesComponent =
+    /*#__PURE__*/
+    function () {
+      function CategoriesComponent(categoryService, toastrService) {
+        _classCallCheck(this, CategoriesComponent);
+
+        this.categoryService = categoryService;
+        this.toastrService = toastrService;
+        this.loading = false;
+      }
+
+      _createClass(CategoriesComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this = this;
+
+          this.loading = true;
+          this.toastrService.success("Welcome to Category Page");
+          setTimeout(function () {
+            _this.loading = false;
+          }, 2500); // this.categoryService.getData().subscribe(data => {
+          //   if (data) {
+          //     console.log(data);
+          //   }
+          // },
+          // error => {
+          //   console.log(error);
+          //  });
+        }
+      }]);
+
+      return CategoriesComponent;
+    }();
+
+    CategoriesComponent.ctorParameters = function () {
+      return [{
+        type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+      }];
     };
 
     CategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -935,6 +1035,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./categories.component.css */
       "./src/app/categories/categories.component.css")).default]
     })], CategoriesComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/config/globals.ts":
+  /*!***********************************!*\
+    !*** ./src/app/config/globals.ts ***!
+    \***********************************/
+
+  /*! exports provided: globals */
+
+  /***/
+  function srcAppConfigGlobalsTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "globals", function () {
+      return globals;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var globals = {
+      dbhosturl: "http://185.227.109.221:6789/" // dbhosturl: "http://localhost:4200/"
+
+    };
     /***/
   },
 
@@ -1071,6 +1204,171 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./header.component.css */
       "./src/app/header/header.component.css")).default]
     })], HeaderComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/home/home.component.css":
+  /*!*****************************************!*\
+    !*** ./src/app/home/home.component.css ***!
+    \*****************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppHomeHomeComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/home/home.component.ts":
+  /*!****************************************!*\
+    !*** ./src/app/home/home.component.ts ***!
+    \****************************************/
+
+  /*! exports provided: HomeComponent */
+
+  /***/
+  function srcAppHomeHomeComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HomeComponent", function () {
+      return HomeComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var HomeComponent = function HomeComponent() {
+      _classCallCheck(this, HomeComponent);
+    };
+
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-home',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./home.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./home.component.css */
+      "./src/app/home/home.component.css")).default]
+    })], HomeComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/categories.service.ts":
+  /*!************************************************!*\
+    !*** ./src/app/services/categories.service.ts ***!
+    \************************************************/
+
+  /*! exports provided: CategoryService */
+
+  /***/
+  function srcAppServicesCategoriesServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "CategoryService", function () {
+      return CategoryService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _config_globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../config/globals */
+    "./src/app/config/globals.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+
+    var CategoryService =
+    /*#__PURE__*/
+    function () {
+      function CategoryService(http) {
+        _classCallCheck(this, CategoryService);
+
+        this.http = http;
+        this.serviceUrl = _config_globals__WEBPACK_IMPORTED_MODULE_3__["globals"].dbhosturl;
+      }
+
+      _createClass(CategoryService, [{
+        key: "postData",
+        value: function postData(data) {
+          var result = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+          this.http.post(this.serviceUrl + "post", data).subscribe(function (res) {
+            result.next(res);
+          }, function (err) {
+            result.error(err);
+          });
+          return result;
+        }
+      }, {
+        key: "getData",
+        value: function getData() {
+          var result = new rxjs__WEBPACK_IMPORTED_MODULE_4__["Subject"]();
+          this.http.get(this.serviceUrl + "get").subscribe(function (res) {
+            result.next(res);
+          }, function (err) {
+            result.error(err);
+          });
+          return result;
+        }
+      }]);
+
+      return CategoryService;
+    }();
+
+    CategoryService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    CategoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], CategoryService);
     /***/
   },
 
