@@ -12,6 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
+import { SubCategoriesComponent } from './subCategory/sub-category.component';
+import { SubChildCategoriesComponent } from './childCategory/sub-child-category.component';
 import { RouterModule, Routes } from "@angular/router";
 import { from } from 'rxjs';
 
@@ -20,6 +22,8 @@ import { CategoryService } from './services/categories.service';
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "categories", component: CategoriesComponent },
+  { path: "subcategories", component: SubCategoriesComponent },
+  { path: "childcategories", component: SubChildCategoriesComponent }
 ];
 
 @NgModule({
@@ -29,7 +33,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     CategoriesComponent,
-    HomeComponent
+    HomeComponent,
+    SubCategoriesComponent,
+    SubChildCategoriesComponent
   ],
   imports: [
     BrowserModule,
