@@ -3,6 +3,7 @@ import CategoryModule from '../../admin/categories';
 import SubCategoryModule from '../../admin/subcategories';
 import SubChildCategoryModule from '../../admin/subchildcategories';
 import OrderModule from '../../admin/orders';
+import ProductModule from '../../admin/products';
 
 let router = Router();
 
@@ -31,10 +32,20 @@ router.route('/subchildcategories/:id?')
     .put(SubChildCategoryModule.update)
     .delete(SubChildCategoryModule.delete);
 
+// Orders Routes
 router.route('/orders')
     .get(OrderModule.getorders);
 router.route('/orders/:id')
     .get(OrderModule.getorders);
 
+// Products Routes
+router.route('/products')
+    .post(ProductModule.addProduct);
+router.route('/getproducts')
+    .post(ProductModule.getProducts);
+router.route('/products/:id')
+.put(ProductModule.updateProduct);
+router.route('/products/:id')
+.delete(ProductModule.deleteProduct);
 
 export let adminRouter = router;
