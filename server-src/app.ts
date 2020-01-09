@@ -1,25 +1,40 @@
-import * as express from 'express';
+import * as express from "express";
 import * as mongoose from "mongoose";
-import * as bodyParser from 'body-parser';
-mongoose.Promise = require('bluebird');
-import { appMiddleware } from './middleware';
-import { apiRouter } from './routes';
+import * as bodyParser from "body-parser";
+import * as cors from "cors";
+mongoose.Promise = require("bluebird");
+import { appMiddleware } from "./middleware";
+import { apiRouter } from "./routes";
 
 class App {
   public express;
-  public connectionString: string = "mongodb+srv://admin:admin@eclassycluster-wfo6k.mongodb.net/dbeclassy?retryWrites=true&w=majority";
+  public connectionString: string =
+    "mongodb+srv://admin:admin@eclassycluster-wfo6k.mongodb.net/dbeclassy?retryWrites=true&w=majority";
 
   constructor() {
     this.express = express();
     this.express.use(bodyParser.json());
     this.express.use(bodyParser.urlencoded({ extended: false }));
+    this.express.use(function(req, res, next) {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+      );
+      res.setHeader(
+        "Access-Control-Allow-Headers",
+        "X-Requested-With,content-type"
+      );
+      res.setHeader("Access-Control-Allow-Credentials", true);
+      next();
+    });
     this.mountRoutes();
     this.mongoSetup();
   }
 
   private mountRoutes(): void {
     this.express.use(appMiddleware(this.express));
-    this.express.use('/api/v1', apiRouter);
+    this.express.use("/api/v1", apiRouter);
   }
 
   private mongoSetup() {
@@ -27,14 +42,16 @@ class App {
       // DON'T REMOVE THIS LINE. To use this line make this function as async type.
       // await mongoose.connect(this.connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
-      mongoose.connect(this.connectionString, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        promiseLibrary: require('bluebird')
-      }).then(() => console.log('connection succesful'))
-        .catch((err) => console.error(err));
+      mongoose
+        .connect(this.connectionString, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          promiseLibrary: require("bluebird")
+        })
+        .then(() => console.log("connection succesful"))
+        .catch(err => console.error(err));
     } catch (error) {
-      throw error || 'Error while connecting to server.';
+      throw error || "Error while connecting to server.";
     }
   }
 }
@@ -49,7 +66,7 @@ export default new App().express;
 //   (err) => {
 //     console.log('disconnected',err);
 //   }
-// );       
+// );
 // mongoose.connect(this.mongoUrl, {
 //   useNewUrlParser: true,
 //   useUnifiedTopology:true

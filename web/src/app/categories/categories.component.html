@@ -1,4 +1,43 @@
 <div class="overlay" *ngIf="loading">
-    <div id="loading-img"></div>
+  <div id="loading-img"></div>
 </div>
 <h2>WELCOME CATEGORY PAGE</h2>
+<form
+  [formGroup]="loginFormGroup"
+  class="example-form"
+  (ngSubmit)="onFormSubmit()"
+>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      placeholder="Category Name"
+      formControlName="categoryname"
+      [errorStateMatcher]="matcher"
+      required
+    />
+    <mat-error>
+      <span
+        *ngIf="
+          !loginFormGroup.get('categoryname').valid &&
+          loginFormGroup.get('categoryname').touched
+        "
+        >Please enter Category Name</span
+      >
+    </mat-error>
+  </mat-form-field>
+  <div class="d-flex justify-content-center d-buttons">
+    <button
+      mat-button
+      class="mat-raised-button mat-button-base"
+      color="primary"
+      [disabled]="!loginFormGroup.valid"
+      type="submit"
+    >
+      Save
+    </button>
+  </div>
+</form>
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
