@@ -38,6 +38,53 @@
   </div>
 </form>
 
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
+    Editable table
+  </h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="text-success" (click)="add()">
+          <mdb-icon fas icon="plus" size="2x"></mdb-icon>
+        </a>
+      </span>
+      <table
+        class="table table-bordered table-responsive-md table-striped text-center"
+      >
+        <tr>
+          <th class="text-center">Category Name</th>
+        </tr>
+        <tr *ngFor="let category of categories; let id = index">
+          <td>
+            <span
+              (blur)="updateCategory(category._id, 'categoryname', $event)"
+              contenteditable="true"
+              >{{ category.categoryname }}</span
+            >
+          </td>
+
+          <td>
+            <span class="table-remove">
+              <button
+                type="button"
+                mdbBtn
+                color="danger"
+                rounded="true"
+                size="sm"
+                class="my-0"
+                (click)="deleteCategory(category._id)"
+              >
+                Remove
+              </button>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license -->

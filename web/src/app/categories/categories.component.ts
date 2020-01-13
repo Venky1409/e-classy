@@ -46,12 +46,14 @@ export class CategoriesComponent implements OnInit {
   loading: boolean = false;
   loginFormGroup: FormGroup;
   isLoadingResults = false;
+  categories: any;
   ngOnInit() {
     console.log("categories", this.api.getCategories());
     this.api.getCategories().subscribe(
       (res: any) => {
         console.log("response", res);
         const id = res._id;
+        this.categories = res.data;
         this.isLoadingResults = false;
       },
       (err: any) => {
@@ -68,6 +70,36 @@ export class CategoriesComponent implements OnInit {
     setTimeout(() => {
       this.loading = false;
     }, 2500);
+  }
+
+  deleteCategory(id: any) {
+    this.api.deleteCategory(id).subscribe(
+      res => {
+        console.log("category deleted successfully");
+        this.isLoadingResults = false;
+      },
+      err => {
+        console.log(err);
+        this.isLoadingResults = false;
+      }
+    );
+  }
+
+  updateCategory(id: number, property: string, event: any) {
+    console.log("id", id, "event", event);
+    const editField = event.target.textContent;
+    this.api.updateCategory(id, property, editField).subscribe(
+      (res: any) => {
+        const id = res._id;
+        console.log("id", id);
+        console.log("category updated successfully");
+        this.isLoadingResults = false;
+      },
+      (err: any) => {
+        console.log(err);
+        this.isLoadingResults = false;
+      }
+    );
   }
 
   onFormSubmit() {
