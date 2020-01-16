@@ -14,10 +14,15 @@ import { CategoriesComponent } from "./categories/categories.component";
 import { HomeComponent } from "./home/home.component";
 import { SubCategoriesComponent } from "./subCategory/sub-category.component";
 import { SubChildCategoriesComponent } from "./childCategory/sub-child-category.component";
+import { ProductsComponent } from "./products/product.component";
+import { AddProductsComponent } from "./addProduct/addProduct.component";
+
 import { RouterModule, Routes } from "@angular/router";
 import { from } from "rxjs";
 
 import { CategoryService } from "./services/categories.service";
+import { ProductsService } from "./services/products.service";
+
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -36,7 +41,9 @@ const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "categories", component: CategoriesComponent },
   { path: "subcategories", component: SubCategoriesComponent },
-  { path: "childcategories", component: SubChildCategoriesComponent }
+  { path: "childcategories", component: SubChildCategoriesComponent },
+  { path: "products", component: ProductsComponent },
+  { path: "addProducts", component: AddProductsComponent }
 ];
 
 @NgModule({
@@ -48,14 +55,16 @@ const appRoutes: Routes = [
     CategoriesComponent,
     HomeComponent,
     SubCategoriesComponent,
-    SubChildCategoriesComponent
+    SubChildCategoriesComponent,
+    ProductsComponent,
+    AddProductsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, { useHash: false }),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
     ToastrModule.forRoot({
       positionClass: "toast-bottom-right",
       timeOut: 0, // disable auto-dismiss
@@ -75,7 +84,7 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatToolbarModule
   ],
-  providers: [CategoryService],
+  providers: [CategoryService, ProductsService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })

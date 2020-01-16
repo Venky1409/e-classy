@@ -22,6 +22,18 @@ export class CategoryService {
       catchError(this.handleError("getCategories", []))
     );
   }
+  getSubCategory(id): Observable<Category[]> {
+    return this.http.get<Category[]>(this.serviceUrl + "admin/subcategories/" +id).pipe(
+      tap(_ => this.log("fetched Category")),
+      catchError(this.handleError("getCategory", []))
+    );
+  }
+  getSubChildCategory(id): Observable<Category[]> {
+    return this.http.get<Category[]>(this.serviceUrl + "admin/subchildcategories/" +id).pipe(
+      tap(_ => this.log("fetched Sub Child Category")),
+      catchError(this.handleError("getSubChildCategory", []))
+    );
+  }
   addCategory(category: Category): Observable<Category> {
     return this.http
       .post<Category>(this.serviceUrl + "admin/categories", category)
