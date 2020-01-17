@@ -25,7 +25,7 @@
       >
     </mat-error>
   </mat-form-field>
-  <div class="d-flex justify-content-center d-buttons">
+  <div class="d-save-button d-buttons">
     <button
       mat-button
       class="mat-raised-button mat-button-base"
@@ -54,7 +54,9 @@
       >
         <tr>
           <th class="text-center">Category Name</th>
+          <th class="text-center">Action</th>
         </tr>
+        
         <tr *ngFor="let category of categories; let id = index">
           <td>
             <span
