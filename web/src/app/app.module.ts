@@ -16,6 +16,7 @@ import { SubCategoriesComponent } from "./subCategory/sub-category.component";
 import { SubChildCategoriesComponent } from "./childCategory/sub-child-category.component";
 import { ProductsComponent } from "./products/product.component";
 import { AddProductsComponent } from "./addProduct/addProduct.component";
+import { ModalControlComponent } from "./modal/modal-control.component";
 
 import { RouterModule, Routes } from "@angular/router";
 import { from } from "rxjs";
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     SubCategoriesComponent,
     SubChildCategoriesComponent,
     ProductsComponent,
-    AddProductsComponent
+    AddProductsComponent,
+    ModalControlComponent
   ],
   imports: [
     BrowserModule,

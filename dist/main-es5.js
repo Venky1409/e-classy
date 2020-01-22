@@ -176,6 +176,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/modal/modal-control.component.html":
+  /*!******************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modal/modal-control.component.html ***!
+    \******************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppModalModalControlComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"modal {{ modalSize }}\" [ngClass]=\"{ 'is-active': visible }\">\r\n  <div class=\"modal-background\" (click)=\"close('cancel', $event)\"></div>\r\n  <div class=\"modal-card\">\r\n    <div class=\"modal-card-head\">\r\n      <p class=\"modal-card-title\">{{title}}</p>\r\n      <button class=\"delete has-no-margin-top\" (click)=\"close('cancel', $event)\"></button>\r\n    </div>\r\n    <section class=\"modal-card-body\">\r\n      <ng-content></ng-content>\r\n    </section>\r\n    <div class=\"modal-card-foot row\">\r\n      <div>\r\n        <button class=\"button is-cancel\" (click)=\"close('cancel', $event)\">{{cancelText}}</button>\r\n        <button class=\"button is-dark\" (click)=\"save('ok', $event)\">{{saveText}}</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/products/product.component.html":
   /*!***************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/products/product.component.html ***!
@@ -191,7 +211,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>\r\n<div class=\"form-group\">\r\n    <label for=\"categoryId\">Product Category:</label>\r\n    <select class=\"form-control\" (change)=\"getProducts($event)\" [(ngModel)]=\"categoryId\">\r\n        <option *ngFor=\"let data of categories\"\r\n        [value]=\"data._id\">{{data.categoryname}}\r\n        </option>\r\n    </select>\r\n</div>\r\n<div *ngIf=\"products.length\">\r\n    <div class=\"d-flex flex-wrap bg-light\">\r\n        <div class=\"p-2 border\" *ngFor=\"let data of products\">\r\n            <i class=\"fa fa-edit edit-icon icon\" (click)=\"openUpdateModal($event, data)\"></i>\r\n            <i class=\"fa fa-trash delete-icon icon\" aria-hidden=\"true\" (click)=\"openDeleteModal($event, data)\"></i>\r\n            <div><b>Titile:</b> {{data.title}}</div>\r\n            <div><b>Sub Title:</b> {{data.subtitle}}</div>\r\n            <div><b>Description:</b> {{data.description}}</div>\r\n            <div><b>Price:</b> {{data.price}}</div>\r\n            <div><b>Quantity:</b> {{data.quantity}}</div>\r\n            <div><b>Measurements:</b> {{data.measurements}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<modal-control [open]=\"deleteProduct\" (close)=\"onDeleteModalClose($event)\" title=\"Delete Product\">\r\n    <div>\r\n      <p>Are you sure you want to delete this Product.</p>\r\n    </div>\r\n</modal-control>\r\n\r\n<modal-control [open]=\"updateProduct\" (close)=\"onUpdateModalClose($event)\" title=\"Update Product\">\r\n    <div>\r\n            <div class=\"form-group\">\r\n              <label for=\"title\">Product Title :</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"subtitle\">Product Sub Title :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"categoryid\">Product Category:</label>\r\n                <select class=\"form-control\" (change)=\"setCategory($event)\" [(ngModel)]=\"categoryid\">\r\n                    <option *ngFor=\"let data of categories\"\r\n                    value=\"{{data._id}}\">{{data.categoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"subcategoryid\">Product Sub Category:</label>\r\n                <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\">\r\n                    <option *ngFor=\"let data of subCategories\"\r\n                    value=\"{{data._id}}\">{{data.subcategoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"price\">Product Price :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Qunatity :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Measurements :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Description :</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" [(ngModel)]=\"description\"></textarea>\r\n              </div>\r\n    </div>\r\n</modal-control>";
     /***/
   },
 
@@ -886,7 +906,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.loading = true;
           this.toastrService.success("Welcome to Add-Product Page");
           this.categoryService.getCategories().subscribe(function (res) {
-            console.log("response", res);
             _this.categories = res.data;
           }, function (err) {
             console.log(err);
@@ -902,7 +921,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.categoryid = e.target.value;
           this.categoryService.getSubCategory(e.target.value).subscribe(function (res) {
-            console.log("response", res);
             _this2.subCategories = res.data;
           }, function (err) {
             console.log(err);
@@ -915,7 +933,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.subcategoryid = e.target.value;
           this.categoryService.getSubChildCategory(e.target.value).subscribe(function (res) {
-            console.log("response", res);
             _this3.subChildCategories = res.data;
           }, function (err) {
             console.log(err);
@@ -1181,25 +1198,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    /*! ./modal/modal-control.component */
+    "./src/app/modal/modal-control.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
-    var _services_categories_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+    var _services_categories_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
     /*! ./services/categories.service */
     "./src/app/services/categories.service.ts");
     /* harmony import */
 
 
-    var _services_products_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+    var _services_products_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
     /*! ./services/products.service */
     "./src/app/services/products.service.ts");
     /* harmony import */
 
 
-    var _angular_material__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+    var _angular_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
 
@@ -1228,16 +1251,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _subCategory_sub_category_component__WEBPACK_IMPORTED_MODULE_13__["SubCategoriesComponent"], _childCategory_sub_child_category_component__WEBPACK_IMPORTED_MODULE_14__["SubChildCategoriesComponent"], _products_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductsComponent"], _addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_16__["AddProductsComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_17__["RouterModule"].forRoot(appRoutes, {
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _subCategory_sub_category_component__WEBPACK_IMPORTED_MODULE_13__["SubCategoriesComponent"], _childCategory_sub_child_category_component__WEBPACK_IMPORTED_MODULE_14__["SubChildCategoriesComponent"], _products_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductsComponent"], _addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_16__["AddProductsComponent"], _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__["ModalControlComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_18__["RouterModule"].forRoot(appRoutes, {
         useHash: true
       }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot({
         positionClass: "toast-bottom-right",
         timeOut: 0,
         closeButton: true // show close button
 
-      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatMenuModule"], _angular_material__WEBPACK_IMPORTED_MODULE_20__["MatToolbarModule"]],
-      providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_18__["CategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_19__["ProductsService"]],
+      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatMenuModule"], _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"]],
+      providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_19__["CategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_20__["ProductsService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })], AppModule);
@@ -1806,6 +1829,150 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/modal/modal-control.component.css":
+  /*!***************************************************!*\
+    !*** ./src/app/modal/modal-control.component.css ***!
+    \***************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppModalModalControlComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZGFsL21vZGFsLWNvbnRyb2wuY29tcG9uZW50LmNzcyJ9 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/modal/modal-control.component.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/modal/modal-control.component.ts ***!
+    \**************************************************/
+
+  /*! exports provided: ModalControlComponent */
+
+  /***/
+  function srcAppModalModalControlComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ModalControlComponent", function () {
+      return ModalControlComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var ModalControlComponent =
+    /*#__PURE__*/
+    function () {
+      function ModalControlComponent() {
+        _classCallCheck(this, ModalControlComponent);
+
+        this.openEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.title = '';
+        this.saveText = 'Ok';
+        this.errorCount = true;
+        this.cancelText = 'Cancel';
+        this.visible = false;
+        this.save = this.close;
+        this.modalSize = '';
+        this.closeEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+      }
+
+      _createClass(ModalControlComponent, [{
+        key: "tick_then",
+        value: function tick_then(fn) {
+          setTimeout(fn, 0);
+        }
+      }, {
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this10 = this;
+
+          this.openEvent.subscribe(function (initiator) {
+            _this10.visible = !!initiator; // TODO revisit this
+
+            _this10.initiator = initiator;
+          });
+        }
+      }, {
+        key: "close",
+        value: function close(action, event) {
+          if (action == 'ok') {
+            this.closeEvent.emit({
+              action: 'closing',
+              initiator: event
+            });
+          }
+
+          if (action == 'yes') {
+            this.visible = false;
+            this.closeEvent.emit({
+              action: action,
+              initiator: this.initiator
+            });
+          }
+
+          if (event.defaultPrevented) {
+            return;
+          }
+
+          this.visible = false;
+          this.closeEvent.emit({
+            action: action,
+            initiator: this.initiator
+          });
+        }
+      }, {
+        key: "toggleVisiblity",
+        value: function toggleVisiblity() {
+          this.visible = !this.visible;
+        }
+      }]);
+
+      return ModalControlComponent;
+    }();
+
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('open')], ModalControlComponent.prototype, "openEvent", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('title')], ModalControlComponent.prototype, "title", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('saveText')], ModalControlComponent.prototype, "saveText", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('errorCount')], ModalControlComponent.prototype, "errorCount", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('cancelText')], ModalControlComponent.prototype, "cancelText", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('visible')], ModalControlComponent.prototype, "visible", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('save')], ModalControlComponent.prototype, "save", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('modalSize')], ModalControlComponent.prototype, "modalSize", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])('close')], ModalControlComponent.prototype, "closeEvent", void 0);
+    ModalControlComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'modal-control',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./modal-control.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/modal/modal-control.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./modal-control.component.css */
+      "./src/app/modal/modal-control.component.css")).default]
+    })], ModalControlComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/products/product.component.css":
   /*!************************************************!*\
     !*** ./src/app/products/product.component.css ***!
@@ -1821,7 +1988,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = ".d-flex {\r\n    justify-content: space-between;\r\n}\r\n.p-2 {\r\n    margin-bottom: 20px;\r\n    width: 300px;\r\n    background: white;\r\n    box-shadow: 1px 1px #ccc;\r\n}\r\n.p-2 div {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n.icon {\r\n    float: right;\r\n    padding: 5px;\r\n    cursor: pointer;\r\n}\r\n.edit-icon {\r\n    color: deepskyblue;\r\n}\r\n.delete-icon {\r\n    color: crimson;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksOEJBQThCO0FBQ2xDO0FBQ0E7SUFDSSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQix3QkFBd0I7QUFDNUI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osWUFBWTtJQUNaLGVBQWU7QUFDbkI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kLWZsZXgge1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcbi5wLTIge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxuICAgIHdpZHRoOiAzMDBweDtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgYm94LXNoYWRvdzogMXB4IDFweCAjY2NjO1xyXG59XHJcbi5wLTIgZGl2IHtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuLmljb24ge1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZWRpdC1pY29uIHtcclxuICAgIGNvbG9yOiBkZWVwc2t5Ymx1ZTtcclxufVxyXG5cclxuLmRlbGV0ZS1pY29uIHtcclxuICAgIGNvbG9yOiBjcmltc29uO1xyXG59Il19 */";
     /***/
   },
 
@@ -1865,36 +2032,182 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _services_categories_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../services/categories.service */
+    "./src/app/services/categories.service.ts");
+    /* harmony import */
+
+
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
     var ProductsComponent =
     /*#__PURE__*/
     function () {
-      function ProductsComponent(productService, toastrService) {
+      function ProductsComponent(productService, categoryService, toastrService) {
         _classCallCheck(this, ProductsComponent);
 
         this.productService = productService;
+        this.categoryService = categoryService;
         this.toastrService = toastrService;
         this.loading = false;
+        this.categories = [];
+        this.subCategories = [];
+        this.products = [];
+        this.updateProduct = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.deleteProduct = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
       }
 
       _createClass(ProductsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this10 = this;
+          var _this11 = this;
 
           this.loading = true;
           this.toastrService.success("Welcome to Products Page");
-          this.productService.getProducts().subscribe(function (res) {
-            console.log("response", res);
+          this.categoryService.getCategories().subscribe(function (res) {
+            _this11.categories = res.data;
           }, function (err) {
             console.log(err);
           });
           setTimeout(function () {
-            _this10.loading = false;
+            _this11.loading = false;
           }, 2500);
+        }
+      }, {
+        key: "getProducts",
+        value: function getProducts(e) {
+          var _this12 = this;
+
+          var categoryid = e.target.value;
+          this.productService.getProducts(categoryid).subscribe(function (res) {
+            _this12.products = res.data;
+          }, function (err) {
+            console.log(err);
+          });
+        }
+      }, {
+        key: "getSubCategory",
+        value: function getSubCategory(id) {
+          var _this13 = this;
+
+          this.categoryService.getSubCategory(id).subscribe(function (res) {
+            _this13.subCategories = res.data;
+          }, function (err) {
+            console.log(err);
+          });
+        }
+      }, {
+        key: "updateProductFun",
+        value: function updateProductFun() {
+          var _this14 = this;
+
+          var updatedProduct = {
+            "title": this.title,
+            "subtitle": this.subtitle,
+            "categoryid": this.categoryid,
+            "subcategoryid": this.subcategoryid,
+            "price": this.price,
+            "quantity": this.quantity,
+            "measurements": this.measurements,
+            "description": this.description
+          };
+          this.productService.updateProduct(this.productId, updatedProduct).subscribe(function (res) {
+            _this14.toastrService.success("Product Updated Successfully");
+
+            var result = _this14.products.filter(function (data) {
+              return data._id == this.productId && data.categoryid == this.categoryId;
+            });
+
+            _this14.products = result;
+          }, function (err) {
+            console.log(err);
+
+            _this14.toastrService.error(err);
+          });
+        }
+      }, {
+        key: "deleteProductFun",
+        value: function deleteProductFun() {
+          var _this15 = this;
+
+          this.productService.deleteProduct(this.productId).subscribe(function (res) {
+            _this15.toastrService.success("Product Deleted Successfully");
+
+            var result = _this15.products.filter(function (data) {
+              return data._id != this.productId;
+            });
+
+            _this15.products = result;
+          }, function (err) {
+            console.log(err);
+
+            _this15.toastrService.error(err);
+          });
+        }
+      }, {
+        key: "openUpdateModal",
+        value: function openUpdateModal(e, data) {
+          this.updateProduct.emit(new Event('open'));
+
+          if (data.categoryid) {
+            this.getSubCategory(data.categoryid);
+          }
+
+          this.title = data.title;
+          this.subtitle = data.subtitle;
+          this.categoryid = data.categoryid;
+          this.subcategoryid = data.subcategoryid;
+          this.price = data.price;
+          this.quantity = data.quantity;
+          this.measurements = data.measurements;
+          this.description = data.description;
+        }
+      }, {
+        key: "openDeleteModal",
+        value: function openDeleteModal(e, data) {
+          this.deleteProduct.emit(new Event('open'));
+          this.productId = data._id;
+        }
+      }, {
+        key: "onUpdateModalClose",
+        value: function onUpdateModalClose(result) {
+          if (result.action == 'cancel') {
+            return;
+          }
+
+          if (result.action != 'closing') {
+            this.updateProductFun();
+          }
+        }
+      }, {
+        key: "onDeleteModalClose",
+        value: function onDeleteModalClose(result) {
+          if (result.action == 'cancel') {
+            return;
+          }
+
+          if (result.action != 'closing') {
+            this.deleteProductFun();
+          }
+        }
+      }, {
+        key: "setCategory",
+        value: function setCategory(e) {
+          var _this16 = this;
+
+          this.categoryid = e.target.value;
+          this.categoryService.getSubCategory(e.target.value).subscribe(function (res) {
+            _this16.subCategories = res.data;
+          }, function (err) {
+            console.log(err);
+          });
+        }
+      }, {
+        key: "setSubCategory",
+        value: function setSubCategory(e) {
+          this.subcategoryid = e.target.value;
         }
       }]);
 
@@ -1905,7 +2218,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return [{
         type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"]
       }, {
-        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+        type: _services_categories_service__WEBPACK_IMPORTED_MODULE_3__["CategoryService"]
+      }, {
+        type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
       }];
     };
 
@@ -1990,28 +2305,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(CategoryService, [{
         key: "getCategories",
         value: function getCategories() {
-          var _this11 = this;
+          var _this17 = this;
 
           return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this11.log("fetched Categories");
+            return _this17.log("fetched Categories");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
         }
       }, {
         key: "getSubCategory",
         value: function getSubCategory(id) {
-          var _this12 = this;
+          var _this18 = this;
 
           return this.http.get(this.serviceUrl + "admin/subcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this12.log("fetched Category");
+            return _this18.log("fetched Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategory", [])));
         }
       }, {
         key: "getSubChildCategory",
         value: function getSubChildCategory(id) {
-          var _this13 = this;
+          var _this19 = this;
 
           return this.http.get(this.serviceUrl + "admin/subchildcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this13.log("fetched Sub Child Category");
+            return _this19.log("fetched Sub Child Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubChildCategory", [])));
         }
       }, {
@@ -2043,14 +2358,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this14 = this;
+          var _this20 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this14.log("".concat(operation, " failed: ").concat(error.message));
+            _this20.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2150,24 +2465,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       _createClass(ProductsService, [{
         key: "getProducts",
-        value: function getProducts() {
-          var _this15 = this;
-
-          return this.http.get(this.serviceUrl + "admin/products").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this15.log("fetched Products");
-          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getProducts", [])));
+        value: function getProducts(id) {
+          return this.http.post(this.serviceUrl + "admin/getproducts", id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (prod) {
+            return console.log("Fetch Products Successefully");
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("Fetch Products")));
         }
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this16 = this;
+          var _this21 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this16.log("".concat(operation, " failed: ").concat(error.message));
+            _this21.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2178,6 +2491,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.http.post(this.serviceUrl + "admin/products", product).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (prod) {
             return console.log("Added Product Successefully");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("addProduct")));
+        }
+      }, {
+        key: "deleteProduct",
+        value: function deleteProduct(id) {
+          var url = "".concat(this.serviceUrl + "admin/products", "/").concat(id);
+          return this.http.delete(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return console.log("deleted product id=".concat(id));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("deleteProduct")));
+        }
+      }, {
+        key: "updateProduct",
+        value: function updateProduct(id, data) {
+          var url = "".concat(this.serviceUrl + "admin/products", "/").concat(id);
+          return this.http.put(url, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return console.log("updated product id=".concat(id));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("updateProduct")));
         }
       }, {
         key: "log",
@@ -2419,12 +2748,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SubCategoriesComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this17 = this;
+          var _this22 = this;
 
           this.loading = true;
           this.toastrService.success("Welcome to Sub-Category Page");
           setTimeout(function () {
-            _this17.loading = false;
+            _this22.loading = false;
           }, 2500); // this.categoryService.getData().subscribe(data => {
           //   if (data) {
           //     console.log(data);

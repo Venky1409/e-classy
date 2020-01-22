@@ -16,10 +16,13 @@ export class ProductsService {
   public serviceUrl: string = globals.dbhosturl;
 
   constructor(private http: HttpClient, private toastrService: ToastrService) {}
-  getProducts(): Observable<any> {
-    return this.http.get<any>(this.serviceUrl + "admin/products").pipe(
-      tap(_ => this.log("fetched Products")),
-      catchError(this.handleError("getProducts", []))
+  getProducts(id): Observable<any> {
+    return this.http.post<any>(this.serviceUrl + "admin/getproducts", id)
+    .pipe(
+      tap((prod: any) =>
+      console.log(`Fetch Products Successefully`)
+      ),
+      catchError(this.handleError<any>("Fetch Products"))
     );
   }
   private handleError<T>(operation = "operation", result?: T) {
@@ -39,6 +42,21 @@ export class ProductsService {
         ),
         catchError(this.handleError<any>("addProduct"))
       );
+  }
+  deleteProduct(id: any): Observable<any> {
+    const url = `${this.serviceUrl + "admin/products"}/${id}`;
+    return this.http.delete<any>(url).pipe(
+      tap(_ => console.log(`deleted product id=${id}`)),
+      catchError(this.handleError<any>("deleteProduct"))
+    );
+  }
+
+  updateProduct(id, data): Observable<any> {
+    const url = `${this.serviceUrl + "admin/products"}/${id}`;
+    return this.http.put(url, data).pipe(
+      tap(_ => console.log(`updated product id=${id}`)),
+      catchError(this.handleError<any>("updateProduct"))
+    );
   }
 
   private log(message: string) {

@@ -1,0 +1,27 @@
+.d-flex {
+    justify-content: space-between;
+}
+.p-2 {
+    margin-bottom: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 1px 1px #ccc;
+}
+.p-2 div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.icon {
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.edit-icon {
+    color: deepskyblue;
+}
+
+.delete-icon {
+    color: crimson;
+}

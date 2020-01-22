@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { CategoryService } from "../services/categories.service";
 import { ProductsService } from "../services/products.service";
 import { ToastrService } from 'ngx-toastr';
@@ -30,7 +30,6 @@ export class AddProductsComponent {
 
     this.categoryService.getCategories().subscribe(
       (res: any) => {
-        console.log("response", res);
         this.categories = res.data;
       },
       (err: any) => {
@@ -47,7 +46,6 @@ export class AddProductsComponent {
     this.categoryid = e.target.value;
     this.categoryService.getSubCategory(e.target.value).subscribe(
       (res: any) => {
-        console.log("response", res);
         this.subCategories = res.data;
       },
       (err: any) => {
@@ -60,7 +58,6 @@ export class AddProductsComponent {
     this.subcategoryid = e.target.value;
     this.categoryService.getSubChildCategory(e.target.value).subscribe(
       (res: any) => {
-        console.log("response", res);
         this.subChildCategories = res.data;
       },
       (err: any) => {
