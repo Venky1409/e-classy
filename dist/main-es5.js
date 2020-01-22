@@ -1618,8 +1618,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/tslib/tslib.es6.js");
 
     var globals = {
-      dbhosturl: "http://localhost:3000/api/v1/" // dbhosturl: "http://localhost:4200/"
-
+      // dbhosturl: "http://localhost:3000/api/v1/"
+      dbhosturl: "https://e-classy.herokuapp.com/api/v1/"
     };
     /***/
   },
