@@ -49,18 +49,7 @@ export class CategoriesComponent implements OnInit {
   categories: any;
   ngOnInit() {
     console.log("categories", this.api.getCategories());
-    this.api.getCategories().subscribe(
-      (res: any) => {
-        console.log("response", res);
-        const id = res._id;
-        this.categories = res.data;
-        this.isLoadingResults = false;
-      },
-      (err: any) => {
-        console.log(err);
-        this.isLoadingResults = false;
-      }
-    );
+    this.loadCategories();
     this.loginFormGroup = this._formBuilder.group({
       categoryname: [null, Validators.required]
     });
@@ -76,6 +65,7 @@ export class CategoriesComponent implements OnInit {
     this.api.deleteCategory(id).subscribe(
       res => {
         console.log("category deleted successfully");
+        this.loadCategories();
         this.isLoadingResults = false;
       },
       err => {
@@ -108,6 +98,21 @@ export class CategoriesComponent implements OnInit {
       (res: any) => {
         const id = res._id;
         console.log("id", id);
+        this.isLoadingResults = false;
+        this.loadCategories();
+      },
+      (err: any) => {
+        console.log(err);
+        this.isLoadingResults = false;
+      }
+    );
+  }
+  private loadCategories() {
+    this.api.getCategories().subscribe(
+      (res: any) => {
+        console.log("sub categiries list", res);
+        const id = res._id;
+        this.categories = res.data;
         this.isLoadingResults = false;
       },
       (err: any) => {
