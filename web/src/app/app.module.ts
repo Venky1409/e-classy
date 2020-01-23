@@ -22,6 +22,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { from } from "rxjs";
 
 import { CategoryService } from "./services/categories.service";
+import { SubCategoryService } from "./services/subcategories.service";
 import { ProductsService } from "./services/products.service";
 
 import {
@@ -86,7 +87,7 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatToolbarModule
   ],
-  providers: [CategoryService, ProductsService],
+  providers: [CategoryService, SubCategoryService, ProductsService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
