@@ -41,14 +41,6 @@
                 <label for="subtitle">Product Sub Title :</label>
                 <input type="text" class="form-control" id="subtitle" placeholder="Enter Product Sub Title" name="subtitle" [(ngModel)]="subtitle">
             </div>
-            <div class="form-group">
-                <label for="categoryid">Product Category:</label>
-                <select class="form-control" (change)="setCategory($event)" [(ngModel)]="categoryid">
-                    <option *ngFor="let data of categories"
-                    value="{{data._id}}">{{data.categoryname}}
-                    </option>
-                </select>
-              </div>
               <div class="form-group">
                 <label for="subcategoryid">Product Sub Category:</label>
                 <select class="form-control" (change)="setSubCategory($event)" [(ngModel)]="subcategoryid">

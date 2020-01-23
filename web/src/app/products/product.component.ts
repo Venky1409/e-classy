@@ -156,18 +156,6 @@ export class ProductsComponent {
     }
   }
 
-  setCategory(e) {
-    this.categoryid = e.target.value;
-    this.categoryService.getSubCategory(e.target.value).subscribe(
-      (res: any) => {
-        this.subCategories = res.data;
-      },
-      (err: any) => {
-        console.log(err);
-      }
-    );
-  }
-
   setSubCategory(e) {
     this.subcategoryid = e.target.value;
   }

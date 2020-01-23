@@ -211,7 +211,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>\r\n<div class=\"form-group\">\r\n    <label for=\"categoryId\">Product Category:</label>\r\n    <select class=\"form-control\" (change)=\"getProducts($event)\" [(ngModel)]=\"categoryId\">\r\n        <option *ngFor=\"let data of categories\"\r\n        [value]=\"data._id\">{{data.categoryname}}\r\n        </option>\r\n    </select>\r\n</div>\r\n<div *ngIf=\"products.length\">\r\n    <div class=\"d-flex flex-wrap bg-light\">\r\n        <div class=\"p-2 border\" *ngFor=\"let data of products\">\r\n            <i class=\"fa fa-edit edit-icon icon\" (click)=\"openUpdateModal($event, data)\"></i>\r\n            <i class=\"fa fa-trash delete-icon icon\" aria-hidden=\"true\" (click)=\"openDeleteModal($event, data)\"></i>\r\n            <div><b>Titile:</b> {{data.title}}</div>\r\n            <div><b>Sub Title:</b> {{data.subtitle}}</div>\r\n            <div><b>Description:</b> {{data.description}}</div>\r\n            <div><b>Price:</b> {{data.price}}</div>\r\n            <div><b>Quantity:</b> {{data.quantity}}</div>\r\n            <div><b>Measurements:</b> {{data.measurements}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<modal-control [open]=\"deleteProduct\" (close)=\"onDeleteModalClose($event)\" title=\"Delete Product\">\r\n    <div>\r\n      <p>Are you sure you want to delete this Product.</p>\r\n    </div>\r\n</modal-control>\r\n\r\n<modal-control [open]=\"updateProduct\" (close)=\"onUpdateModalClose($event)\" title=\"Update Product\">\r\n    <div>\r\n            <div class=\"form-group\">\r\n              <label for=\"title\">Product Title :</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"subtitle\">Product Sub Title :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"categoryid\">Product Category:</label>\r\n                <select class=\"form-control\" (change)=\"setCategory($event)\" [(ngModel)]=\"categoryid\">\r\n                    <option *ngFor=\"let data of categories\"\r\n                    value=\"{{data._id}}\">{{data.categoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"subcategoryid\">Product Sub Category:</label>\r\n                <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\">\r\n                    <option *ngFor=\"let data of subCategories\"\r\n                    value=\"{{data._id}}\">{{data.subcategoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"price\">Product Price :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Qunatity :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Measurements :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Description :</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" [(ngModel)]=\"description\"></textarea>\r\n              </div>\r\n    </div>\r\n</modal-control>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>\r\n<div class=\"form-group\">\r\n    <label for=\"categoryId\">Product Category:</label>\r\n    <select class=\"form-control\" (change)=\"getProducts($event)\" [(ngModel)]=\"categoryId\">\r\n        <option *ngFor=\"let data of categories\"\r\n        [value]=\"data._id\">{{data.categoryname}}\r\n        </option>\r\n    </select>\r\n</div>\r\n<div *ngIf=\"products.length\">\r\n    <div class=\"d-flex flex-wrap bg-light\">\r\n        <div class=\"p-2 border\" *ngFor=\"let data of products\">\r\n            <i class=\"fa fa-edit edit-icon icon\" (click)=\"openUpdateModal($event, data)\"></i>\r\n            <i class=\"fa fa-trash delete-icon icon\" aria-hidden=\"true\" (click)=\"openDeleteModal($event, data)\"></i>\r\n            <div><b>Titile:</b> {{data.title}}</div>\r\n            <div><b>Sub Title:</b> {{data.subtitle}}</div>\r\n            <div><b>Description:</b> {{data.description}}</div>\r\n            <div><b>Price:</b> {{data.price}}</div>\r\n            <div><b>Quantity:</b> {{data.quantity}}</div>\r\n            <div><b>Measurements:</b> {{data.measurements}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<modal-control [open]=\"deleteProduct\" (close)=\"onDeleteModalClose($event)\" title=\"Delete Product\">\r\n    <div>\r\n      <p>Are you sure you want to delete this Product.</p>\r\n    </div>\r\n</modal-control>\r\n\r\n<modal-control [open]=\"updateProduct\" (close)=\"onUpdateModalClose($event)\" title=\"Update Product\">\r\n    <div>\r\n            <div class=\"form-group\">\r\n              <label for=\"title\">Product Title :</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"subtitle\">Product Sub Title :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\">\r\n            </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"subcategoryid\">Product Sub Category:</label>\r\n                <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\">\r\n                    <option *ngFor=\"let data of subCategories\"\r\n                    value=\"{{data._id}}\">{{data.subcategoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"price\">Product Price :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Qunatity :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Measurements :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Description :</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" [(ngModel)]=\"description\"></textarea>\r\n              </div>\r\n    </div>\r\n</modal-control>";
     /***/
   },
 
@@ -2193,18 +2193,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
         }
       }, {
-        key: "setCategory",
-        value: function setCategory(e) {
-          var _this16 = this;
-
-          this.categoryid = e.target.value;
-          this.categoryService.getSubCategory(e.target.value).subscribe(function (res) {
-            _this16.subCategories = res.data;
-          }, function (err) {
-            console.log(err);
-          });
-        }
-      }, {
         key: "setSubCategory",
         value: function setSubCategory(e) {
           this.subcategoryid = e.target.value;
@@ -2305,28 +2293,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(CategoryService, [{
         key: "getCategories",
         value: function getCategories() {
-          var _this17 = this;
+          var _this16 = this;
 
           return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this17.log("fetched Categories");
+            return _this16.log("fetched Categories");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
         }
       }, {
         key: "getSubCategory",
         value: function getSubCategory(id) {
-          var _this18 = this;
+          var _this17 = this;
 
           return this.http.get(this.serviceUrl + "admin/subcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this18.log("fetched Category");
+            return _this17.log("fetched Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategory", [])));
         }
       }, {
         key: "getSubChildCategory",
         value: function getSubChildCategory(id) {
-          var _this19 = this;
+          var _this18 = this;
 
           return this.http.get(this.serviceUrl + "admin/subchildcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this19.log("fetched Sub Child Category");
+            return _this18.log("fetched Sub Child Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubChildCategory", [])));
         }
       }, {
@@ -2358,14 +2346,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this20 = this;
+          var _this19 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this20.log("".concat(operation, " failed: ").concat(error.message));
+            _this19.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2473,14 +2461,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this21 = this;
+          var _this20 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this21.log("".concat(operation, " failed: ").concat(error.message));
+            _this20.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2748,12 +2736,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SubCategoriesComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this22 = this;
+          var _this21 = this;
 
           this.loading = true;
           this.toastrService.success("Welcome to Sub-Category Page");
           setTimeout(function () {
-            _this22.loading = false;
+            _this21.loading = false;
           }, 2500); // this.categoryService.getData().subscribe(data => {
           //   if (data) {
           //     console.log(data);
