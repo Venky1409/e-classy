@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CATEGORY PAGE</h2>\r\n<div class=\"card\">\r\n    <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n    <div class=\"card-body\">\r\n      <div id=\"table\" class=\"table-editable\">\r\n        <span class=\"table-add float-right mb-3 mr-2\">\r\n          <a class=\"text-success\" (click)=\"add()\">\r\n            <mdb-icon fas icon=\"plus\" size=\"2x\"></mdb-icon>\r\n          </a>\r\n        </span>\r\n        <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n          <tr>\r\n            <th class=\"text-center\">Person Name</th>\r\n            <th class=\"text-center\">Age</th>\r\n            <th class=\"text-center\">Company Name</th>\r\n            <th class=\"text-center\">Country</th>\r\n            <th class=\"text-center\">City</th>\r\n            <th class=\"text-center\">Remove</th>\r\n          </tr>\r\n          <tr *ngFor=\"let person of personList; let id = index\">\r\n            <td>\r\n              <span (keyup)=\"changeValue(id, 'name', $event)\" (blur)=\"updateList(id, 'name', $event)\" contenteditable=\"true\">{{person.name}}</span>\r\n            </td>\r\n            <td>\r\n              <span contenteditable=\"true\" (keyup)=\"changeValue(id, 'age', $event)\" (blur)=\"updateList(id, 'age', $event)\">{{person.age}}</span>\r\n            </td>\r\n            <td>\r\n              <span contenteditable=\"true\" (keyup)=\"changeValue(id, 'companyName', $event)\" (blur)=\"updateList(id, 'companyName', $event)\">{{person.companyName}}</span>\r\n            </td>\r\n            <td>\r\n              <span contenteditable=\"true\" (keyup)=\"changeValue(id, 'country', $event)\" (blur)=\"updateList(id, 'country', $event)\">{{person.country}}</span>\r\n            </td>\r\n            <td>\r\n              <span contenteditable=\"true\" (keyup)=\"changeValue(id, 'city', $event)\" (blur)=\"updateList(id, 'city', $event)\">{{person.city}}</span>\r\n            </td>\r\n            <td>\r\n              <span class=\"table-remove\">\r\n                <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\" (click)=\"remove(id)\">Remove</button>\r\n              </span>\r\n            </td>\r\n          </tr>\r\n        </table>\r\n      </div>\r\n    </div>\r\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"overlay\" *ngIf=\"loading\">\r\n  <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CATEGORY PAGE</h2>\r\n<form id=\"subCategory\" fxLayout=\"column\" [formGroup]=\"subCategoryFormGroup\" class=\"example-form\"\r\n  (ngSubmit)=\"onFormSubmit()\">\r\n\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"categoryid\" (ngModelChange)=\"onCategorySelection(selectField.value)\" #selectField>\r\n        <option value=\"\">Select Category</option>\r\n        <option *ngFor=\"let category of categories\" value={{category._id}}>{{category.categoryname}}</option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field class=\"example-full-width\">\r\n      <input matInput placeholder=\"Sub-Category Name\" formControlName=\"subcategoryname\" [errorStateMatcher]=\"matcher\"\r\n        required />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"d-save-button d-buttons\">\r\n    <button mat-button class=\"mat-raised-button mat-button-base\" color=\"primary\"\r\n      [disabled]=\"!subCategoryFormGroup.valid\" type=\"submit\">\r\n      Save\r\n    </button>\r\n  </div>\r\n</form>\r\n<div class=\"card\">\r\n  <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n  <div class=\"card-body\">\r\n    <div id=\"table\" class=\"table-editable\">\r\n      <span class=\"table-add float-right mb-3 mr-2\">\r\n        <a class=\"text-success\" (click)=\"add()\">\r\n          <mdb-icon fas icon=\"plus\" size=\"2x\"></mdb-icon>\r\n        </a>\r\n      </span>\r\n      <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n        <tr>\r\n          <th class=\"text-center\">Category Name</th>\r\n          <th class=\"text-center\">Sub-Category Name</th>\r\n          <th class=\"text-center\">Remove</th>\r\n        </tr>\r\n        <tr *ngFor=\"let subcategory of subcategories; let id = index\">\r\n          <td>\r\n            <span contenteditable=\"true\">{{subcategory.categoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span contenteditable=\"true\">{{subcategory.subcategoryname}}</span>\r\n          </td>\r\n          <td>\r\n            <span class=\"table-remove\">\r\n              <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\"\r\n                (click)=\"deleteSubCategory(subcategory._id)\">Remove</button>\r\n            </span>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -587,8 +587,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modal/modal-control.component */ "./src/app/modal/modal-control.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _services_categories_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/categories.service */ "./src/app/services/categories.service.ts");
-/* harmony import */ var _services_products_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/products.service */ "./src/app/services/products.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _services_subcategories_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/subcategories.service */ "./src/app/services/subcategories.service.ts");
+/* harmony import */ var _services_products_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/products.service */ "./src/app/services/products.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
 
 
 
@@ -650,19 +652,19 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             }),
             ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatInputModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatTableModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatPaginatorModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatSortModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatProgressSpinnerModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatIconModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatButtonModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatCardModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatFormFieldModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatMenuModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_21__["MatToolbarModule"]
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatTableModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatPaginatorModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatSortModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatProgressSpinnerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatIconModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatButtonModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatCardModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatFormFieldModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatMenuModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatToolbarModule"]
         ],
-        providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_19__["CategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_20__["ProductsService"]],
+        providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_19__["CategoryService"], _services_subcategories_service__WEBPACK_IMPORTED_MODULE_20__["SubCategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_21__["ProductsService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
         schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })
@@ -726,15 +728,7 @@ let CategoriesComponent = class CategoriesComponent {
     }
     ngOnInit() {
         console.log("categories", this.api.getCategories());
-        this.api.getCategories().subscribe((res) => {
-            console.log("response", res);
-            const id = res._id;
-            this.categories = res.data;
-            this.isLoadingResults = false;
-        }, (err) => {
-            console.log(err);
-            this.isLoadingResults = false;
-        });
+        this.loadCategories();
         this.loginFormGroup = this._formBuilder.group({
             categoryname: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
         });
@@ -747,6 +741,7 @@ let CategoriesComponent = class CategoriesComponent {
     deleteCategory(id) {
         this.api.deleteCategory(id).subscribe(res => {
             console.log("category deleted successfully");
+            this.loadCategories();
             this.isLoadingResults = false;
         }, err => {
             console.log(err);
@@ -771,6 +766,18 @@ let CategoriesComponent = class CategoriesComponent {
         this.api.addCategory(this.loginFormGroup.value).subscribe((res) => {
             const id = res._id;
             console.log("id", id);
+            this.isLoadingResults = false;
+            this.loadCategories();
+        }, (err) => {
+            console.log(err);
+            this.isLoadingResults = false;
+        });
+    }
+    loadCategories() {
+        this.api.getCategories().subscribe((res) => {
+            console.log("sub categiries list", res);
+            const id = res._id;
+            this.categories = res.data;
             this.isLoadingResults = false;
         }, (err) => {
             console.log(err);
@@ -1415,6 +1422,77 @@ ProductsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/services/subcategories.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/services/subcategories.service.ts ***!
+  \***************************************************/
+/*! exports provided: SubCategoryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubCategoryService", function() { return SubCategoryService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _config_globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/globals */ "./src/app/config/globals.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+
+let SubCategoryService = class SubCategoryService {
+    constructor(http) {
+        this.http = http;
+        this.serviceUrl = _config_globals__WEBPACK_IMPORTED_MODULE_3__["globals"].dbhosturl;
+    }
+    getCategories() {
+        return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(_ => this.log("fetched Categories")), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
+    }
+    getSubCategories(id) {
+        return this.http
+            .get(this.serviceUrl + "admin/subcategories/" + id)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(_ => this.log("fetched sub Categories")), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubCategories", [])));
+    }
+    addSubCategory(category) {
+        return this.http
+            .post(this.serviceUrl + "admin/subcategories", category)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])((prod) => console.log(`added category w/ id=${category.id}`)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("addCategory")));
+    }
+    updateSubCategory(id, categoryname, value) {
+        const url = `${this.serviceUrl + "admin/categories"}/${id}`;
+        const data = { categoryname: value };
+        return this.http.put(url, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(_ => console.log(`updated category id=${id}`)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("updateCategory")));
+    }
+    deleteSubCategory(id) {
+        const url = `${this.serviceUrl + "admin/subcategories"}/${id}`;
+        return this.http.delete(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(_ => console.log(`deleted sub category id=${id}`)), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("deleteCategory")));
+    }
+    handleError(operation = "operation", result) {
+        return (error) => {
+            console.error(error); // log to console instead
+            this.log(`${operation} failed: ${error.message}`);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
+        };
+    }
+    log(message) {
+        console.log(message);
+    }
+};
+SubCategoryService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+SubCategoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+], SubCategoryService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/sidebar/sidebar.component.css":
 /*!***********************************************!*\
   !*** ./src/app/sidebar/sidebar.component.css ***!
@@ -1473,81 +1551,113 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************!*\
   !*** ./src/app/subCategory/sub-category.component.ts ***!
   \*******************************************************/
-/*! exports provided: SubCategoriesComponent */
+/*! exports provided: MyErrorStateMatcher, SubCategoriesComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyErrorStateMatcher", function() { return MyErrorStateMatcher; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubCategoriesComponent", function() { return SubCategoriesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _services_categories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/categories.service */ "./src/app/services/categories.service.ts");
+/* harmony import */ var _services_subcategories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/subcategories.service */ "./src/app/services/subcategories.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 
 
 
 
+
+class MyErrorStateMatcher {
+    isErrorState(control, form) {
+        const isSubmitted = form && form.submitted;
+        return !!(control &&
+            control.invalid &&
+            (control.dirty || control.touched || isSubmitted));
+    }
+}
 let SubCategoriesComponent = class SubCategoriesComponent {
-    constructor(categoryService, toastrService) {
-        this.categoryService = categoryService;
+    constructor(_formBuilder, api, toastrService) {
+        this._formBuilder = _formBuilder;
+        this.api = api;
         this.toastrService = toastrService;
+        this.matcher = new MyErrorStateMatcher();
         this.loading = false;
-        this.personList = [
-            { id: 1, name: 'Aurelia Vega', age: 30, companyName: 'Deepends', country: 'Spain', city: 'Madrid' },
-            { id: 2, name: 'Guerra Cortez', age: 45, companyName: 'Insectus', country: 'USA', city: 'San Francisco' },
-            { id: 3, name: 'Guadalupe House', age: 26, companyName: 'Isotronic', country: 'Germany', city: 'Frankfurt am Main' },
-            { id: 4, name: 'Aurelia Vega', age: 30, companyName: 'Deepends', country: 'Spain', city: 'Madrid' },
-            { id: 5, name: 'Elisa Gallagher', age: 31, companyName: 'Portica', country: 'United Kingdom', city: 'London' },
-        ];
-        this.awaitingPersonList = [
-            { id: 6, name: 'George Vega', age: 28, companyName: 'Classical', country: 'Russia', city: 'Moscow' },
-            { id: 7, name: 'Mike Low', age: 22, companyName: 'Lou', country: 'USA', city: 'Los Angeles' },
-            { id: 8, name: 'John Derp', age: 36, companyName: 'Derping', country: 'USA', city: 'Chicago' },
-            { id: 9, name: 'Anastasia John', age: 21, companyName: 'Ajo', country: 'Brazil', city: 'Rio' },
-            { id: 10, name: 'John Maklowicz', age: 36, companyName: 'Mako', country: 'Poland', city: 'Bialystok' },
-        ];
+        this.isLoadingResults = false;
     }
     ngOnInit() {
+        console.log("categories", this.api.getCategories());
+        this.loadCategories();
+        this.subCategoryFormGroup = this._formBuilder.group({
+            categoryid: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            subcategoryname: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+        });
         this.loading = true;
         this.toastrService.success("Welcome to Sub-Category Page");
         setTimeout(() => {
             this.loading = false;
         }, 2500);
-        // this.categoryService.getData().subscribe(data => {
-        //   if (data) {
-        //     console.log(data);
-        //   }
-        // },
-        // error => {
-        //   console.log(error);
-        //  });
-    }
-    updateList(id, property, event) {
-        const editField = event.target.textContent;
-        this.personList[id][property] = editField;
-    }
-    remove(id) {
-        this.awaitingPersonList.push(this.personList[id]);
-        this.personList.splice(id, 1);
-    }
-    add() {
-        if (this.awaitingPersonList.length > 0) {
-            const person = this.awaitingPersonList[0];
-            this.personList.push(person);
-            this.awaitingPersonList.splice(0, 1);
-        }
     }
     changeValue(id, property, event) {
         this.editField = event.target.textContent;
     }
+    onFormSubmit() {
+        this.isLoadingResults = true;
+        this.api.addSubCategory(this.subCategoryFormGroup.value).subscribe((res) => {
+            const id = res._id;
+            console.log("respose ", res);
+            this.isLoadingResults = false;
+        }, (err) => {
+            console.log(err);
+            this.isLoadingResults = false;
+        });
+    }
+    onCategorySelection(categoryId) {
+        console.log("am here", categoryId);
+        this.selectedSubCategory = categoryId;
+        this.loadSubCategories(categoryId);
+    }
+    deleteSubCategory(id) {
+        this.api.deleteSubCategory(id).subscribe(res => {
+            console.log("category deleted successfully");
+            this.loadSubCategories(this.selectedSubCategory);
+            this.isLoadingResults = false;
+        }, err => {
+            console.log(err);
+            this.isLoadingResults = false;
+        });
+    }
+    loadCategories() {
+        this.api.getCategories().subscribe((res) => {
+            console.log("response", res);
+            const id = res._id;
+            this.categories = res.data;
+            this.isLoadingResults = false;
+        }, (err) => {
+            console.log(err);
+            this.isLoadingResults = false;
+        });
+    }
+    loadSubCategories(categoryId) {
+        this.api.getSubCategories(categoryId).subscribe((res) => {
+            console.log("subcategories list response", res);
+            const id = res._id;
+            this.subcategories = res.data;
+            this.isLoadingResults = false;
+        }, (err) => {
+            console.log(err);
+            this.isLoadingResults = false;
+        });
+    }
 };
 SubCategoriesComponent.ctorParameters = () => [
-    { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
+    { type: _services_subcategories_service__WEBPACK_IMPORTED_MODULE_2__["SubCategoryService"] },
     { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] }
 ];
 SubCategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-sub-categories',
+        selector: "app-sub-categories",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./sub-category.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/subCategory/sub-category.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./sub-category.component.css */ "./src/app/subCategory/sub-category.component.css")).default]
     })
