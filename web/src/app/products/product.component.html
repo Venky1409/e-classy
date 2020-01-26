@@ -35,15 +35,15 @@
     <div>
             <div class="form-group">
               <label for="title">Product Title :</label>
-              <input type="text" class="form-control" id="title" placeholder="Enter Product Title" name="title" [(ngModel)]="title">
+              <input type="text" class="form-control" id="title" placeholder="Enter Product Title" name="title" [(ngModel)]="title" required>
             </div>
             <div class="form-group">
                 <label for="subtitle">Product Sub Title :</label>
-                <input type="text" class="form-control" id="subtitle" placeholder="Enter Product Sub Title" name="subtitle" [(ngModel)]="subtitle">
+                <input type="text" class="form-control" id="subtitle" placeholder="Enter Product Sub Title" name="subtitle" required [(ngModel)]="subtitle">
             </div>
               <div class="form-group">
                 <label for="subcategoryid">Product Sub Category:</label>
-                <select class="form-control" (change)="setSubCategory($event)" [(ngModel)]="subcategoryid">
+                <select class="form-control" (change)="setSubCategory($event)" [(ngModel)]="subcategoryid" required>
                     <option *ngFor="let data of subCategories"
                     value="{{data._id}}">{{data.subcategoryname}}
                     </option>
@@ -51,19 +51,19 @@
               </div>
               <div class="form-group">
                 <label for="price">Product Price :</label>
-                <input type="number" class="form-control" id="price" placeholder="Enter Product Price" name="price" [(ngModel)]="price">
+                <input type="number" class="form-control" id="price" placeholder="Enter Product Price" name="price" [(ngModel)]="price" required>
               </div>
               <div class="form-group">
                 <label for="quantity">Product Qunatity :</label>
-                <input type="number" class="form-control" id="price" placeholder="Enter Product Quantity" name="quantity" [(ngModel)]="quantity">
+                <input type="number" class="form-control" id="price" placeholder="Enter Product Quantity" name="quantity" [(ngModel)]="quantity" required>
               </div>
               <div class="form-group">
                 <label for="quantity">Product Measurements :</label>
-                <input type="text" class="form-control" id="measurements" placeholder="Enter Product Measurements" name="measurements" [(ngModel)]="measurements">
+                <input type="text" class="form-control" id="measurements" placeholder="Enter Product Measurements" name="measurements" [(ngModel)]="measurements" required>
               </div>
               <div class="form-group">
                 <label for="quantity">Product Description :</label>
-                <textarea type="text" class="form-control" id="description" placeholder="Enter Product Description" name="description" [(ngModel)]="description"></textarea>
+                <textarea type="text" class="form-control" id="description" placeholder="Enter Product Description" name="description" [(ngModel)]="description" required></textarea>
               </div>
     </div>
 </modal-control>

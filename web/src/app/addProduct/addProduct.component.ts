@@ -82,6 +82,10 @@ export class AddProductsComponent {
       "measurements": this.measurements,
       "description": this.description
     }
+    if (!this.title || !this.subtitle || !this.categoryid || !this.subcategoryid || !this.price || !this.quantity || !this.measurements || !this.description) {
+      alert("Please fill out the required fields");
+      return;
+    }
     this.productService.addProduct(data).subscribe(
       (res: any) => {
         console.log("response", res);

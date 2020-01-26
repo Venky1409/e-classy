@@ -25,3 +25,15 @@
 .delete-icon {
     color: crimson;
 }
+
+textarea:invalid {
+    border: 2px solid red;
+  }
+
+  input:invalid {
+    border: 2px solid red;
+  }
+
+  select:invalid {
+    border: 2px solid red;
+  }
