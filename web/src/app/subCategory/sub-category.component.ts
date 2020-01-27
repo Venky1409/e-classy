@@ -88,6 +88,22 @@ export class SubCategoriesComponent implements OnInit {
     this.selectedSubCategory = categoryId;
     this.loadSubCategories(categoryId);
   }
+  updateSubCategory(id: number, property: string, event: any) {
+    console.log("id", id, "event", event);
+    const editField = event.target.textContent;
+    this.api.updateSubCategory(id, property, editField).subscribe(
+      (res: any) => {
+        const id = res._id;
+        console.log("id", id);
+        console.log("sub category updated successfully");
+        this.isLoadingResults = false;
+      },
+      (err: any) => {
+        console.log(err);
+        this.isLoadingResults = false;
+      }
+    );
+  }
   deleteSubCategory(id: any) {
     this.api.deleteSubCategory(id).subscribe(
       res => {

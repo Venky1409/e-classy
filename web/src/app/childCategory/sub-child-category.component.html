@@ -1,4 +1,72 @@
 <div class="overlay" *ngIf="loading">
-    <div id="loading-img"></div>
+  <div id="loading-img"></div>
 </div>
 <h2>WELCOME SUB-CHILD-CATEGORY PAGE</h2>
+<form id="subCategory" fxLayout="column" [formGroup]="subChildCategoryFormGroup" class="example-form"
+  (ngSubmit)="onFormSubmit()">
+
+  <div class="input-row">
+    <mat-form-field>
+      <select formControlName="categoryid" (ngModelChange)="onCategorySelection(selectCategoryField.value)"
+        #selectCategoryField>
+        <option value="">Select Category</option>
+        <option *ngFor="let category of categories" value={{category._id}}>{{category.categoryname}}</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="input-row">
+    <mat-form-field>
+      <select formControlName="subcategoryid" (ngModelChange)="onSubCategorySelection(selectChildField.value)"
+        #selectChildField>
+        <option value="">Select Sub Category</option>
+        <option *ngFor="let subcategory of subcategories" value={{subcategory._id}}>{{subcategory.subcategoryname}}
+        </option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div class="input-row">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Sub Child Category Name" formControlName="subchildcategoryname"
+        [errorStateMatcher]="matcher" required />
+    </mat-form-field>
+  </div>
+  <div class="d-save-button d-buttons">
+    <button mat-button class="mat-raised-button mat-button-base" color="primary"
+      [disabled]="!subChildCategoryFormGroup.valid" type="submit">
+      Save
+    </button>
+  </div>
+</form>
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">Category Name</th>
+          <th class="text-center">Sub Category Name</th>
+          <th class="text-center">Sub Child Category Name</th>
+          <th class="text-center">Remove</th>
+        </tr>
+        <tr *ngFor="let subchildcategory of subchildcategories; let id = index">
+          <td>
+            <span>{{subchildcategory.categoryid}}</span>
+          </td>
+          <td>
+            <span>{{subchildcategory.subcategoryid}}</span>
+          </td>
+          <td>
+            <span (blur)="updateSubChildCategory(subchildcategory._id, 'subchildcategoryname', $event)"
+              contenteditable="true">{{subchildcategory.subchildcategoryname}}</span>
+          </td>
+          <td>
+            <span class="table-remove">
+              <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0"
+                (click)="deleteSubChildCategory(subchildcategory._id)">Remove</button>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

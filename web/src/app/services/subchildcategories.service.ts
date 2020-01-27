@@ -12,7 +12,7 @@ import { Category } from "../categories/category";
 import { catchError, tap } from "rxjs/operators";
 
 @Injectable()
-export class SubCategoryService {
+export class SubChildCategoryService {
   public serviceUrl: string = globals.dbhosturl;
 
   constructor(private http: HttpClient) {}
@@ -31,9 +31,18 @@ export class SubCategoryService {
       );
   }
 
-  addSubCategory(category: Category): Observable<Category> {
+  getSubChildCategories(id): Observable<Category[]> {
     return this.http
-      .post<Category>(this.serviceUrl + "admin/subcategories", category)
+      .get<Category[]>(this.serviceUrl + "admin/subchildcategories/" + id)
+      .pipe(
+        tap(_ => this.log("fetched sub child Categories")),
+        catchError(this.handleError("getSubChildCategories", []))
+      );
+  }
+
+  addSubChildCategory(category: Category): Observable<Category> {
+    return this.http
+      .post<Category>(this.serviceUrl + "admin/subchildcategories", category)
       .pipe(
         tap((prod: Category) =>
           console.log(`added category w/ id=${category.id}`)
@@ -42,19 +51,23 @@ export class SubCategoryService {
       );
   }
 
-  updateSubCategory(id: any, categoryname: string, value): Observable<any> {
-    const url = `${this.serviceUrl + "admin/subcategories"}/${id}`;
-    const data = { subcategoryname: value };
+  updateSubChildCategory(
+    id: any,
+    categoryname: string,
+    value
+  ): Observable<any> {
+    const url = `${this.serviceUrl + "admin/subchildcategories"}/${id}`;
+    const data = { subchildcategoryname: value };
     return this.http.put(url, data).pipe(
-      tap(_ => console.log(`updated category id=${id}`)),
+      tap(_ => console.log(`updated sub child category id=${id}`)),
       catchError(this.handleError<any>("updateCategory"))
     );
   }
 
-  deleteSubCategory(id: any): Observable<Category> {
-    const url = `${this.serviceUrl + "admin/subcategories"}/${id}`;
+  deleteSubChildCategory(id: any): Observable<Category> {
+    const url = `${this.serviceUrl + "admin/subchildcategories"}/${id}`;
     return this.http.delete<Category>(url).pipe(
-      tap(_ => console.log(`deleted sub category id=${id}`)),
+      tap(_ => console.log(`deleted sub child category id=${id}`)),
       catchError(this.handleError<Category>("deleteCategory"))
     );
   }
