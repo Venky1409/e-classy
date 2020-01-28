@@ -53,7 +53,7 @@ export class CategoriesComponent implements OnInit {
     this.loginFormGroup = this._formBuilder.group({
       categoryname: [null, Validators.required]
     });
-    this.loading = true;
+    this.loading = false;
     this.toastrService.success("Welcome to Category Page");
 
     setTimeout(() => {

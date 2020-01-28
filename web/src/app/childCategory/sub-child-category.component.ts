@@ -58,7 +58,7 @@ export class SubChildCategoriesComponent implements OnInit {
       subcategoryid: [null, Validators.required],
       subchildcategoryname: ["", Validators.required]
     });
-    this.loading = true;
+    this.loading = false;
     this.toastrService.success("Welcome to Sub-Category Page");
 
     setTimeout(() => {

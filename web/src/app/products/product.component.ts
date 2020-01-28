@@ -80,7 +80,10 @@ export class ProductsComponent {
     "measurements": this.measurements,
     "description": this.description
     }
-    
+    if (!this.title || !this.categoryid || !this.subcategoryid || !this.price || !this.description) {
+      alert("Please fill out the required fields");
+      return;
+    }
     this.productService.updateProduct(this.productId, updatedProduct).subscribe(
       (res: any) => {
         this.toastrService.success("Product Updated Successfully");

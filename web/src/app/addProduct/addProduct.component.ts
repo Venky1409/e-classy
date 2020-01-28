@@ -25,7 +25,7 @@ export class AddProductsComponent {
   description;
 
   ngOnInit() {
-    this.loading = true;
+    this.loading = false;
     this.toastrService.success("Welcome to Add-Product Page");
 
     this.categoryService.getCategories().subscribe(
@@ -82,7 +82,7 @@ export class AddProductsComponent {
       "measurements": this.measurements,
       "description": this.description
     }
-    if (!this.title || !this.subtitle || !this.categoryid || !this.subcategoryid || !this.price || !this.quantity || !this.measurements || !this.description) {
+    if (!this.title || !this.categoryid || !this.subcategoryid || !this.price || !this.description) {
       alert("Please fill out the required fields");
       return;
     }

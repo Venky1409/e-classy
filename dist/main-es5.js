@@ -51,7 +51,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME ADD_PRODUCTS PAGE</h2>\r\n<div>\r\n    <form>\r\n        <div class=\"form-group\">\r\n          <label for=\"title\">Product Title :</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"subtitle\">Product Sub Title :</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"categoryid\">Product Category:</label>\r\n            <select class=\"form-control\" (change)=\"setCategory($event)\" [(ngModel)]=\"categoryid\" required>\r\n                <option *ngFor=\"let data of categories\"\r\n                [value]=\"data._id\">{{data.categoryname}}\r\n                </option>\r\n            </select>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"subcategoryid\">Product Sub Category:</label>\r\n            <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\" required>\r\n                <option *ngFor=\"let data of subCategories\"\r\n                [value]=\"data._id\">{{data.subcategoryname}}\r\n                </option>\r\n            </select>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"subchildcategoryid\">Product Sub Child Category:</label>\r\n            <select class=\"form-control\" (change)=\"setSubChildCategory($event)\" [(ngModel)]=\"subchildcategoryid\">\r\n                <option *ngFor=\"let data of subChildCategories\"\r\n                [value]=\"data._id\">{{data.subchildcategoryname}}\r\n                </option>\r\n            </select>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"price\">Product Price :</label>\r\n            <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\" required>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"quantity\">Product Qunatity :</label>\r\n            <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\" required>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"quantity\">Product Measurements :</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" required [(ngModel)]=\"measurements\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"quantity\">Product Description :</label>\r\n            <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" required [(ngModel)]=\"description\"></textarea>\r\n          </div>\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"submitForm()\">Submit</button>\r\n    </form>\r\n</div>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME ADD_PRODUCTS PAGE</h2>\r\n<div class=\"row\">\r\n    <!-- <form> -->\r\n      <div class=\"col\">\r\n        <div class=\"form-group\">\r\n          <label for=\"title\">Product Title<span class=\"required\">*</span> :</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\" required='' aria-required=\"\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"categoryid\">Product Category<span class=\"required\">*</span> :</label>\r\n          <select class=\"form-control\" (change)=\"setCategory($event)\" [(ngModel)]=\"categoryid\" required>\r\n              <option *ngFor=\"let data of categories\"\r\n              [value]=\"data._id\">{{data.categoryname}}\r\n              </option>\r\n          </select>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"subchildcategoryid\">Product Sub Child Category:</label>\r\n          <select class=\"form-control\" (change)=\"setSubChildCategory($event)\" [(ngModel)]=\"subchildcategoryid\">\r\n              <option *ngFor=\"let data of subChildCategories\"\r\n              [value]=\"data._id\">{{data.subchildcategoryname}}\r\n              </option>\r\n          </select>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"price\">Product Price <span class=\"required\">*</span> :</label>\r\n          <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\" required>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"quantity\">Product Measurements :</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\">\r\n        </div>\r\n      </div>\r\n      <div class=\"col\">\r\n        <div class=\"form-group\">\r\n          <label for=\"subtitle\">Product Sub Title :</label>\r\n          <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"subcategoryid\">Product Sub Category <span class=\"required\">*</span> :</label>\r\n          <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\" required>\r\n              <option *ngFor=\"let data of subCategories\"\r\n              [value]=\"data._id\">{{data.subcategoryname}}\r\n              </option>\r\n          </select>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"quantity\">Product Qunatity :</label>\r\n          <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"quantity\">Product Description <span class=\"required\">*</span> :</label>\r\n          <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" required=\"\" [(ngModel)]=\"description\" aria-required=\"\"></textarea>\r\n        </div>\r\n      </div>\r\n    <!-- </form> -->\r\n</div>\r\n<div class=\"row justify-content-center align-items-center\">\r\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"submitForm()\">Submit</button>\r\n</div>";
     /***/
   },
 
@@ -111,7 +111,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CHILD-CATEGORY PAGE</h2>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n  <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CHILD-CATEGORY PAGE</h2>\r\n<form id=\"subCategory\" fxLayout=\"column\" [formGroup]=\"subChildCategoryFormGroup\" class=\"example-form\"\r\n  (ngSubmit)=\"onFormSubmit()\">\r\n\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"categoryid\" (ngModelChange)=\"onCategorySelection(selectCategoryField.value)\"\r\n        #selectCategoryField>\r\n        <option value=\"\">Select Category</option>\r\n        <option *ngFor=\"let category of categories\" value={{category._id}}>{{category.categoryname}}</option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"subcategoryid\" (ngModelChange)=\"onSubCategorySelection(selectChildField.value)\"\r\n        #selectChildField>\r\n        <option value=\"\">Select Sub Category</option>\r\n        <option *ngFor=\"let subcategory of subcategories\" value={{subcategory._id}}>{{subcategory.subcategoryname}}\r\n        </option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field class=\"example-full-width\">\r\n      <input matInput placeholder=\"Sub Child Category Name\" formControlName=\"subchildcategoryname\"\r\n        [errorStateMatcher]=\"matcher\" required />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"d-save-button d-buttons\">\r\n    <button mat-button class=\"mat-raised-button mat-button-base\" color=\"primary\"\r\n      [disabled]=\"!subChildCategoryFormGroup.valid\" type=\"submit\">\r\n      Save\r\n    </button>\r\n  </div>\r\n</form>\r\n<div class=\"card\">\r\n  <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n  <div class=\"card-body\">\r\n    <div id=\"table\" class=\"table-editable\">\r\n      <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n        <tr>\r\n          <th class=\"text-center\">Category Name</th>\r\n          <th class=\"text-center\">Sub Category Name</th>\r\n          <th class=\"text-center\">Sub Child Category Name</th>\r\n          <th class=\"text-center\">Remove</th>\r\n        </tr>\r\n        <tr *ngFor=\"let subchildcategory of subchildcategories; let id = index\">\r\n          <td>\r\n            <span>{{subchildcategory.categoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span>{{subchildcategory.subcategoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span (blur)=\"updateSubChildCategory(subchildcategory._id, 'subchildcategoryname', $event)\"\r\n              contenteditable=\"true\">{{subchildcategory.subchildcategoryname}}</span>\r\n          </td>\r\n          <td>\r\n            <span class=\"table-remove\">\r\n              <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\"\r\n                (click)=\"deleteSubChildCategory(subchildcategory._id)\">Remove</button>\r\n            </span>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -131,7 +131,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<!-- <footer class=\"bdT ta-c p-30 lh-0 fsz-sm c-grey-600\">\r\n    <span>Copyright © 2019 Designed by <a href=\"#\" target='_blank' title=\"E-Classy\">Colorlib</a>. All rights reserved.</span>\r\n</footer> -->\r\n<footer class=\"sticky-footer bg-white\">\r\n    <div class=\"container my-auto\">\r\n      <div class=\"copyright text-center my-auto\">\r\n        <span>Copyright &copy; Your Website 2019</span>\r\n      </div>\r\n    </div>\r\n  </footer>";
+    __webpack_exports__["default"] = "<!-- <footer class=\"bdT ta-c p-30 lh-0 fsz-sm c-grey-600\">\r\n    <span>Copyright © 2019 Designed by <a href=\"#\" target='_blank' title=\"E-Classy\">Colorlib</a>. All rights reserved.</span>\r\n</footer> -->\r\n<footer class=\"sticky-footer bg-white\">\r\n    <div class=\"container my-auto\">\r\n      <div class=\"copyright text-center my-auto\">\r\n        <span>Copyright &copy; E-Classy &hearts;</span>\r\n      </div>\r\n    </div>\r\n  </footer>";
     /***/
   },
 
@@ -211,7 +211,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>\r\n<div class=\"form-group\">\r\n    <label for=\"categoryId\">Product Category:</label>\r\n    <select class=\"form-control\" (change)=\"getProducts($event)\" [(ngModel)]=\"categoryId\">\r\n        <option *ngFor=\"let data of categories\"\r\n        [value]=\"data._id\">{{data.categoryname}}\r\n        </option>\r\n    </select>\r\n</div>\r\n<div *ngIf=\"products.length\">\r\n    <div class=\"d-flex flex-wrap bg-light\">\r\n        <div class=\"p-2 border\" *ngFor=\"let data of products\">\r\n            <i class=\"fa fa-edit edit-icon icon\" (click)=\"openUpdateModal($event, data)\"></i>\r\n            <i class=\"fa fa-trash delete-icon icon\" aria-hidden=\"true\" (click)=\"openDeleteModal($event, data)\"></i>\r\n            <div><b>Titile:</b> {{data.title}}</div>\r\n            <div><b>Sub Title:</b> {{data.subtitle}}</div>\r\n            <div><b>Description:</b> {{data.description}}</div>\r\n            <div><b>Price:</b> {{data.price}}</div>\r\n            <div><b>Quantity:</b> {{data.quantity}}</div>\r\n            <div><b>Measurements:</b> {{data.measurements}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<modal-control [open]=\"deleteProduct\" (close)=\"onDeleteModalClose($event)\" title=\"Delete Product\">\r\n    <div>\r\n      <p>Are you sure you want to delete this Product.</p>\r\n    </div>\r\n</modal-control>\r\n\r\n<modal-control [open]=\"updateProduct\" (close)=\"onUpdateModalClose($event)\" title=\"Update Product\">\r\n    <div>\r\n            <div class=\"form-group\">\r\n              <label for=\"title\">Product Title :</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"subtitle\">Product Sub Title :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" required [(ngModel)]=\"subtitle\">\r\n            </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"subcategoryid\">Product Sub Category:</label>\r\n                <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\" required>\r\n                    <option *ngFor=\"let data of subCategories\"\r\n                    value=\"{{data._id}}\">{{data.subcategoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"price\">Product Price :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\" required>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Qunatity :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\" required>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Measurements :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\" required>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Description :</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" [(ngModel)]=\"description\" required></textarea>\r\n              </div>\r\n    </div>\r\n</modal-control>";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n    <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME PRODUCTS PAGE</h2>\r\n<div class=\"form-group\">\r\n    <label for=\"categoryId\">Product Category:</label>\r\n    <select class=\"form-control\" (change)=\"getProducts($event)\" [(ngModel)]=\"categoryId\">\r\n        <option *ngFor=\"let data of categories\"\r\n        [value]=\"data._id\">{{data.categoryname}}\r\n        </option>\r\n    </select>\r\n</div>\r\n<div *ngIf=\"products.length\">\r\n    <div class=\"d-flex flex-wrap bg-light\">\r\n        <div class=\"p-2 border\" *ngFor=\"let data of products\">\r\n            <i class=\"fa fa-edit edit-icon icon\" (click)=\"openUpdateModal($event, data)\"></i>\r\n            <i class=\"fa fa-trash delete-icon icon\" aria-hidden=\"true\" (click)=\"openDeleteModal($event, data)\"></i>\r\n            <div><b>Titile:</b> {{data.title}}</div>\r\n            <div><b>Sub Title:</b> {{data.subtitle}}</div>\r\n            <div><b>Description:</b> {{data.description}}</div>\r\n            <div><b>Price:</b> {{data.price}}</div>\r\n            <div><b>Quantity:</b> {{data.quantity}}</div>\r\n            <div><b>Measurements:</b> {{data.measurements}}</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<modal-control [open]=\"deleteProduct\" (close)=\"onDeleteModalClose($event)\" title=\"Delete Product\">\r\n    <div>\r\n      <p>Are you sure you want to delete this Product.</p>\r\n    </div>\r\n</modal-control>\r\n\r\n<modal-control [open]=\"updateProduct\" (close)=\"onUpdateModalClose($event)\" title=\"Update Product\">\r\n    <div>\r\n            <div class=\"form-group\">\r\n              <label for=\"title\">Product Title <span class=\"required\">*</span> :</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Enter Product Title\" name=\"title\" [(ngModel)]=\"title\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"subtitle\">Product Sub Title :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"subtitle\" placeholder=\"Enter Product Sub Title\" name=\"subtitle\" [(ngModel)]=\"subtitle\">\r\n            </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"subcategoryid\">Product Sub Category <span class=\"required\">*</span> :</label>\r\n                <select class=\"form-control\" (change)=\"setSubCategory($event)\" [(ngModel)]=\"subcategoryid\" required>\r\n                    <option *ngFor=\"let data of subCategories\"\r\n                    value=\"{{data._id}}\">{{data.subcategoryname}}\r\n                    </option>\r\n                </select>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"price\">Product Price <span class=\"required\">*</span> :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Price\" name=\"price\" [(ngModel)]=\"price\" required>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Qunatity :</label>\r\n                <input type=\"number\" class=\"form-control\" id=\"price\" placeholder=\"Enter Product Quantity\" name=\"quantity\" [(ngModel)]=\"quantity\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Measurements :</label>\r\n                <input type=\"text\" class=\"form-control\" id=\"measurements\" placeholder=\"Enter Product Measurements\" name=\"measurements\" [(ngModel)]=\"measurements\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label for=\"quantity\">Product Description <span class=\"required\">*</span> :</label>\r\n                <textarea type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Enter Product Description\" name=\"description\" [(ngModel)]=\"description\" required></textarea>\r\n              </div>\r\n    </div>\r\n</modal-control>";
     /***/
   },
 
@@ -231,7 +231,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "  <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n    <!-- Sidebar - Brand -->\r\n    <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"#\">\r\n      <div class=\"sidebar-brand-icon rotate-n-15\">\r\n        <i class=\"fas fa-laugh-wink\"></i>\r\n      </div>\r\n      <div class=\"sidebar-brand-text mx-3\">E-Classy</div>\r\n    </a>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider my-0\">\r\n\r\n    <!-- Nav Item - Dashboard -->\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n        <span>Dashboard</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Profile\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Category Management</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" routerLink=\"/categories\" routerLinkActive=\"active\">Categories</a>\r\n          <a class=\"collapse-item\" routerLink=\"/subcategories\" routerLinkActive=\"active\">Sub Categories</a>\r\n          <a class=\"collapse-item\" routerLink=\"/childcategories\" routerLinkActive=\"active\">Sub Child Categories</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Product Management</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingThree\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" routerLink=\"/products\" routerLinkActive=\"active\">Products</a>\r\n          <a class=\"collapse-item\" routerLink=\"/addProducts\" routerLinkActive=\"active\">Add Product</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Addons\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUtilities\" aria-expanded=\"true\" aria-controls=\"collapseUtilities\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Utilities</span>\r\n      </a>\r\n      <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <h6 class=\"collapse-header\">Custom Utilities:</h6>\r\n          <a class=\"collapse-item\" href=\"#\">Colors</a>\r\n          <a class=\"collapse-item\" href=\"#\">Borders</a>\r\n          <a class=\"collapse-item\" href=\"#\">Animations</a>\r\n          <a class=\"collapse-item\" href=\"#\">Other</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <!-- Nav Item - Charts -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-chart-area\"></i>\r\n        <span>Charts</span></a>\r\n    </li>\r\n\r\n    <!-- Nav Item - Tables -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-table\"></i>\r\n        <span>Tables</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n    <!-- Sidebar Toggler (Sidebar) -->\r\n    <div class=\"text-center d-none d-md-inline\">\r\n      <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n    </div>\r\n\r\n  </ul>";
+    __webpack_exports__["default"] = "  <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n    <!-- Sidebar - Brand -->\r\n    <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"#\">\r\n      <div class=\"sidebar-brand-icon rotate-n-15\">\r\n        <i class=\"fas fa-laugh-wink\"></i>\r\n      </div>\r\n      <div class=\"sidebar-brand-text mx-3\">E-Classy</div>\r\n    </a>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider my-0\">\r\n\r\n    <!-- Nav Item - Dashboard -->\r\n    <li class=\"nav-item active\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n        <span>Dashboard</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Profile\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Category Management</span>\r\n      </a>\r\n      <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" routerLink=\"/categories\" routerLinkActive=\"active\">Categories</a>\r\n          <a class=\"collapse-item\" routerLink=\"/subcategories\" routerLinkActive=\"active\">Sub Categories</a>\r\n          <a class=\"collapse-item\" routerLink=\"/childcategories\" routerLinkActive=\"active\">Sub Child Categories</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseThree\" aria-expanded=\"true\" aria-controls=\"collapseThree\">\r\n        <i class=\"fas fa-fw fa-cog\"></i>\r\n        <span>Product Management</span>\r\n      </a>\r\n      <div id=\"collapseThree\" class=\"collapse\" aria-labelledby=\"headingThree\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <a class=\"collapse-item\" routerLink=\"/products\" routerLinkActive=\"active\">Products</a>\r\n          <a class=\"collapse-item\" routerLink=\"/addProducts\" routerLinkActive=\"active\">Add Product</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider\">\r\n\r\n    <!-- Heading -->\r\n    <div class=\"sidebar-heading\">\r\n      Addons\r\n    </div>\r\n\r\n    <!-- Nav Item - Pages Collapse Menu -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUtilities\" aria-expanded=\"true\" aria-controls=\"collapseUtilities\">\r\n        <i class=\"fas fa-fw fa-wrench\"></i>\r\n        <span>Utilities</span>\r\n      </a>\r\n      <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n        <div class=\"bg-white py-2 collapse-inner rounded\">\r\n          <h6 class=\"collapse-header\">Custom Utilities:</h6>\r\n          <a class=\"collapse-item\" href=\"#\">Colors</a>\r\n          <a class=\"collapse-item\" href=\"#\">Borders</a>\r\n          <a class=\"collapse-item\" href=\"#\">Animations</a>\r\n          <a class=\"collapse-item\" href=\"#\">Other</a>\r\n        </div>\r\n      </div>\r\n    </li>\r\n\r\n    <!-- Nav Item - Charts -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-chart-area\"></i>\r\n        <span>Charts</span></a>\r\n    </li>\r\n\r\n    <!-- Nav Item - Tables -->\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" href=\"#\">\r\n        <i class=\"fas fa-fw fa-table\"></i>\r\n        <span>Tables</span></a>\r\n    </li>\r\n\r\n    <!-- Divider -->\r\n    <hr class=\"sidebar-divider d-none d-md-block\">\r\n\r\n    <!-- Sidebar Toggler (Sidebar) -->\r\n    <!-- <div class=\"text-center d-none d-md-inline\">\r\n      <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n    </div> -->\r\n\r\n  </ul>";
     /***/
   },
 
@@ -251,7 +251,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n  <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CATEGORY PAGE</h2>\r\n<form id=\"subCategory\" fxLayout=\"column\" [formGroup]=\"subCategoryFormGroup\" class=\"example-form\"\r\n  (ngSubmit)=\"onFormSubmit()\">\r\n\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"categoryid\" (ngModelChange)=\"onCategorySelection(selectField.value)\" #selectField>\r\n        <option value=\"\">Select Category</option>\r\n        <option *ngFor=\"let category of categories\" value={{category._id}}>{{category.categoryname}}</option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field class=\"example-full-width\">\r\n      <input matInput placeholder=\"Sub-Category Name\" formControlName=\"subcategoryname\" [errorStateMatcher]=\"matcher\"\r\n        required />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"d-save-button d-buttons\">\r\n    <button mat-button class=\"mat-raised-button mat-button-base\" color=\"primary\"\r\n      [disabled]=\"!subCategoryFormGroup.valid\" type=\"submit\">\r\n      Save\r\n    </button>\r\n  </div>\r\n</form>\r\n<div class=\"card\">\r\n  <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n  <div class=\"card-body\">\r\n    <div id=\"table\" class=\"table-editable\">\r\n      <span class=\"table-add float-right mb-3 mr-2\">\r\n        <a class=\"text-success\" (click)=\"add()\">\r\n          <mdb-icon fas icon=\"plus\" size=\"2x\"></mdb-icon>\r\n        </a>\r\n      </span>\r\n      <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n        <tr>\r\n          <th class=\"text-center\">Category Name</th>\r\n          <th class=\"text-center\">Sub-Category Name</th>\r\n          <th class=\"text-center\">Remove</th>\r\n        </tr>\r\n        <tr *ngFor=\"let subcategory of subcategories; let id = index\">\r\n          <td>\r\n            <span contenteditable=\"true\">{{subcategory.categoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span contenteditable=\"true\">{{subcategory.subcategoryname}}</span>\r\n          </td>\r\n          <td>\r\n            <span class=\"table-remove\">\r\n              <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\"\r\n                (click)=\"deleteSubCategory(subcategory._id)\">Remove</button>\r\n            </span>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"overlay\" *ngIf=\"loading\">\r\n  <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CATEGORY PAGE</h2>\r\n<form id=\"subCategory\" fxLayout=\"column\" [formGroup]=\"subCategoryFormGroup\" class=\"example-form\"\r\n  (ngSubmit)=\"onFormSubmit()\">\r\n\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"categoryid\" (ngModelChange)=\"onCategorySelection(selectField.value)\" #selectField>\r\n        <option value=\"\">Select Category</option>\r\n        <option *ngFor=\"let category of categories\" value={{category._id}}>{{category.categoryname}}</option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field class=\"example-full-width\">\r\n      <input matInput placeholder=\"Sub-Category Name\" formControlName=\"subcategoryname\" [errorStateMatcher]=\"matcher\"\r\n        required />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"d-save-button d-buttons\">\r\n    <button mat-button class=\"mat-raised-button mat-button-base\" color=\"primary\"\r\n      [disabled]=\"!subCategoryFormGroup.valid\" type=\"submit\">\r\n      Save\r\n    </button>\r\n  </div>\r\n</form>\r\n<div class=\"card\">\r\n  <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n  <div class=\"card-body\">\r\n    <div id=\"table\" class=\"table-editable\">\r\n      <span class=\"table-add float-right mb-3 mr-2\">\r\n        <a class=\"text-success\" (click)=\"add()\">\r\n          <mdb-icon fas icon=\"plus\" size=\"2x\"></mdb-icon>\r\n        </a>\r\n      </span>\r\n      <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n        <tr>\r\n          <th class=\"text-center\">Category Name</th>\r\n          <th class=\"text-center\">Sub-Category Name</th>\r\n          <th class=\"text-center\">Remove</th>\r\n        </tr>\r\n        <tr *ngFor=\"let subcategory of subcategories; let id = index\">\r\n          <td>\r\n            <span>{{subcategory.categoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span (blur)=\"updateSubCategory(subcategory._id, 'subcategoryname', $event)\"\r\n              contenteditable=\"true\">{{subcategory.subcategoryname}}</span>\r\n          </td>\r\n          <td>\r\n            <span class=\"table-remove\">\r\n              <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\"\r\n                (click)=\"deleteSubCategory(subcategory._id)\">Remove</button>\r\n            </span>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -829,7 +829,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "  textarea:invalid {\r\n    border: 2px solid red;\r\n  }\r\n\r\n  input:invalid {\r\n    border: 2px solid red;\r\n  }\r\n\r\n  select:invalid {\r\n    border: 2px solid red;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkUHJvZHVjdC9hZGRQcm9kdWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkVBQUU7SUFDRSxxQkFBcUI7RUFDdkI7O0VBRUE7SUFDRSxxQkFBcUI7RUFDdkI7O0VBRUE7SUFDRSxxQkFBcUI7RUFDdkIiLCJmaWxlIjoic3JjL2FwcC9hZGRQcm9kdWN0L2FkZFByb2R1Y3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiAgdGV4dGFyZWE6aW52YWxpZCB7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XHJcbiAgfVxyXG5cclxuICBpbnB1dDppbnZhbGlkIHtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcclxuICB9XHJcblxyXG4gIHNlbGVjdDppbnZhbGlkIHtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcclxuICB9Il19 */";
+    __webpack_exports__["default"] = "textarea:invalid {\r\n  border: 2px solid #bac8f3;\r\n}\r\n\r\ninput:invalid {\r\n  border: 2px solid #bac8f3;\r\n}\r\n\r\nselect:invalid {\r\n  border: 2px solid #bac8f3;\r\n}\r\n\r\n.required {\r\n  color: red;\r\n}\r\n\r\n.align-items-center {\r\n  margin-bottom: 15px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRkUHJvZHVjdC9hZGRQcm9kdWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC9hZGRQcm9kdWN0L2FkZFByb2R1Y3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRleHRhcmVhOmludmFsaWQge1xyXG4gIGJvcmRlcjogMnB4IHNvbGlkICNiYWM4ZjM7XHJcbn1cclxuXHJcbmlucHV0OmludmFsaWQge1xyXG4gIGJvcmRlcjogMnB4IHNvbGlkICNiYWM4ZjM7XHJcbn1cclxuXHJcbnNlbGVjdDppbnZhbGlkIHtcclxuICBib3JkZXI6IDJweCBzb2xpZCAjYmFjOGYzO1xyXG59XHJcblxyXG4ucmVxdWlyZWQge1xyXG4gIGNvbG9yOiByZWQ7XHJcbn1cclxuXHJcbi5hbGlnbi1pdGVtcy1jZW50ZXIge1xyXG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XHJcbn0iXX0= */";
     /***/
   },
 
@@ -903,7 +903,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this = this;
 
-          this.loading = true;
+          this.loading = false;
           this.toastrService.success("Welcome to Add-Product Page");
           this.categoryService.getCategories().subscribe(function (res) {
             _this.categories = res.data;
@@ -960,7 +960,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             "description": this.description
           };
 
-          if (!this.title || !this.subtitle || !this.categoryid || !this.subcategoryid || !this.price || !this.quantity || !this.measurements || !this.description) {
+          if (!this.title || !this.categoryid || !this.subcategoryid || !this.price || !this.description) {
             alert("Please fill out the required fields");
             return;
           }
@@ -1228,13 +1228,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services_products_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    var _services_subchildcategories_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+    /*! ./services/subchildcategories.service */
+    "./src/app/services/subchildcategories.service.ts");
+    /* harmony import */
+
+
+    var _services_products_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
     /*! ./services/products.service */
     "./src/app/services/products.service.ts");
     /* harmony import */
 
 
-    var _angular_material__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    var _angular_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
 
@@ -1271,8 +1277,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         timeOut: 0,
         closeButton: true // show close button
 
-      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatMenuModule"], _angular_material__WEBPACK_IMPORTED_MODULE_22__["MatToolbarModule"]],
-      providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_19__["CategoryService"], _services_subcategories_service__WEBPACK_IMPORTED_MODULE_20__["SubCategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_21__["ProductsService"]],
+      }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastContainerModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatTableModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatPaginatorModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatSortModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatProgressSpinnerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatIconModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatFormFieldModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatMenuModule"], _angular_material__WEBPACK_IMPORTED_MODULE_23__["MatToolbarModule"]],
+      providers: [_services_categories_service__WEBPACK_IMPORTED_MODULE_19__["CategoryService"], _services_subcategories_service__WEBPACK_IMPORTED_MODULE_20__["SubCategoryService"], _services_subchildcategories_service__WEBPACK_IMPORTED_MODULE_21__["SubChildCategoryService"], _services_products_service__WEBPACK_IMPORTED_MODULE_22__["ProductsService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["NO_ERRORS_SCHEMA"], _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
     })], AppModule);
@@ -1399,7 +1405,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.loginFormGroup = this._formBuilder.group({
             categoryname: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
           });
-          this.loading = true;
+          this.loading = false;
           this.toastrService.success("Welcome to Category Page");
           setTimeout(function () {
             _this5.loading = false;
@@ -1523,13 +1529,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     !*** ./src/app/childCategory/sub-child-category.component.ts ***!
     \***************************************************************/
 
-  /*! exports provided: SubChildCategoriesComponent */
+  /*! exports provided: MyErrorStateMatcher, SubChildCategoriesComponent */
 
   /***/
   function srcAppChildCategorySubChildCategoryComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MyErrorStateMatcher", function () {
+      return MyErrorStateMatcher;
+    });
     /* harmony export (binding) */
 
 
@@ -1551,25 +1563,52 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _services_categories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../services/categories.service */
-    "./src/app/services/categories.service.ts");
+    var _services_subchildcategories_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../services/subchildcategories.service */
+    "./src/app/services/subchildcategories.service.ts");
     /* harmony import */
 
 
     var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+
+    var MyErrorStateMatcher =
+    /*#__PURE__*/
+    function () {
+      function MyErrorStateMatcher() {
+        _classCallCheck(this, MyErrorStateMatcher);
+      }
+
+      _createClass(MyErrorStateMatcher, [{
+        key: "isErrorState",
+        value: function isErrorState(control, form) {
+          var isSubmitted = form && form.submitted;
+          return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+        }
+      }]);
+
+      return MyErrorStateMatcher;
+    }();
 
     var SubChildCategoriesComponent =
     /*#__PURE__*/
     function () {
-      function SubChildCategoriesComponent(categoryService, toastrService) {
+      function SubChildCategoriesComponent(_formBuilder, api, toastrService) {
         _classCallCheck(this, SubChildCategoriesComponent);
 
-        this.categoryService = categoryService;
+        this._formBuilder = _formBuilder;
+        this.api = api;
         this.toastrService = toastrService;
+        this.matcher = new MyErrorStateMatcher();
         this.loading = false;
+        this.isLoadingResults = false;
       }
 
       _createClass(SubChildCategoriesComponent, [{
@@ -1577,18 +1616,127 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function ngOnInit() {
           var _this10 = this;
 
-          this.loading = true;
+          this.loadCategories();
+          this.subChildCategoryFormGroup = this._formBuilder.group({
+            categoryid: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            subcategoryid: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            subchildcategoryname: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+          });
+          this.loading = false;
           this.toastrService.success("Welcome to Sub-Category Page");
           setTimeout(function () {
             _this10.loading = false;
-          }, 2500); // this.categoryService.getData().subscribe(data => {
-          //   if (data) {
-          //     console.log(data);
-          //   }
-          // },
-          // error => {
-          //   console.log(error);
-          //  });
+          }, 2500);
+        }
+      }, {
+        key: "changeValue",
+        value: function changeValue(id, property, event) {
+          this.editField = event.target.textContent;
+        }
+      }, {
+        key: "onFormSubmit",
+        value: function onFormSubmit() {
+          var _this11 = this;
+
+          this.isLoadingResults = true;
+          this.api.addSubChildCategory(this.subChildCategoryFormGroup.value).subscribe(function (res) {
+            var id = res._id;
+            console.log("respose ", res);
+            _this11.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this11.isLoadingResults = false;
+          });
+        }
+      }, {
+        key: "onCategorySelection",
+        value: function onCategorySelection(categoryId) {
+          this.selectedSubCategory = categoryId;
+          this.loadSubCategories(categoryId);
+        }
+      }, {
+        key: "onSubCategorySelection",
+        value: function onSubCategorySelection(subcategoryid) {
+          this.selectedSubChildCategory = subcategoryid;
+          this.loadSubChildCategories(subcategoryid);
+        }
+      }, {
+        key: "updateSubChildCategory",
+        value: function updateSubChildCategory(id, property, event) {
+          var _this12 = this;
+
+          console.log("id", id, "event", event);
+          var editField = event.target.textContent;
+          this.api.updateSubChildCategory(id, property, editField).subscribe(function (res) {
+            var id = res._id;
+            console.log("id", id);
+            console.log("sub child category updated successfully");
+            _this12.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this12.isLoadingResults = false;
+          });
+        }
+      }, {
+        key: "deleteSubChildCategory",
+        value: function deleteSubChildCategory(id) {
+          var _this13 = this;
+
+          this.api.deleteSubChildCategory(id).subscribe(function (res) {
+            console.log("sub child category deleted successfully");
+
+            _this13.loadSubChildCategories(_this13.selectedSubChildCategory);
+
+            _this13.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this13.isLoadingResults = false;
+          });
+        }
+      }, {
+        key: "loadCategories",
+        value: function loadCategories() {
+          var _this14 = this;
+
+          this.api.getCategories().subscribe(function (res) {
+            console.log("categories response", res);
+            var id = res._id;
+            _this14.categories = res.data;
+            _this14.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this14.isLoadingResults = false;
+          });
+        }
+      }, {
+        key: "loadSubCategories",
+        value: function loadSubCategories(categoryId) {
+          var _this15 = this;
+
+          this.api.getSubCategories(categoryId).subscribe(function (res) {
+            console.log("subcategories list response", res);
+            var id = res._id;
+            _this15.subcategories = res.data;
+            _this15.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this15.isLoadingResults = false;
+          });
+        }
+      }, {
+        key: "loadSubChildCategories",
+        value: function loadSubChildCategories(subcategoryid) {
+          var _this16 = this;
+
+          this.api.getSubChildCategories(subcategoryid).subscribe(function (res) {
+            console.log("subcategories list response", res);
+            var id = res._id;
+            _this16.subchildcategories = res.data;
+            _this16.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this16.isLoadingResults = false;
+          });
         }
       }]);
 
@@ -1597,14 +1745,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     SubChildCategoriesComponent.ctorParameters = function () {
       return [{
-        type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"]
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
+      }, {
+        type: _services_subchildcategories_service__WEBPACK_IMPORTED_MODULE_2__["SubChildCategoryService"]
       }, {
         type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
       }];
     };
 
     SubChildCategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-sub-child-categories',
+      selector: "app-sub-child-categories",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./sub-child-category.component.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/childCategory/sub-child-category.component.html")).default,
@@ -1642,8 +1792,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/tslib/tslib.es6.js");
 
     var globals = {
-      dbhosturl: "http://localhost:3000/api/v1/" //dbhosturl: "https://e-classy.herokuapp.com/api/v1/"
-
+      //dbhosturl: "http://localhost:3000/api/v1/"
+      dbhosturl: "https://e-classy.herokuapp.com/api/v1/"
     };
     /***/
   },
@@ -1929,12 +2079,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this11 = this;
+          var _this17 = this;
 
           this.openEvent.subscribe(function (initiator) {
-            _this11.visible = !!initiator; // TODO revisit this
+            _this17.visible = !!initiator; // TODO revisit this
 
-            _this11.initiator = initiator;
+            _this17.initiator = initiator;
           });
         }
       }, {
@@ -2012,7 +2162,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".d-flex {\r\n    justify-content: space-between;\r\n}\r\n.p-2 {\r\n    margin-bottom: 20px;\r\n    width: 300px;\r\n    background: white;\r\n    box-shadow: 1px 1px #ccc;\r\n}\r\n.p-2 div {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n.icon {\r\n    float: right;\r\n    padding: 5px;\r\n    cursor: pointer;\r\n}\r\n.edit-icon {\r\n    color: deepskyblue;\r\n}\r\n.delete-icon {\r\n    color: crimson;\r\n}\r\ntextarea:invalid {\r\n    border: 2px solid red;\r\n  }\r\ninput:invalid {\r\n    border: 2px solid red;\r\n  }\r\nselect:invalid {\r\n    border: 2px solid red;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksOEJBQThCO0FBQ2xDO0FBQ0E7SUFDSSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQix3QkFBd0I7QUFDNUI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osWUFBWTtJQUNaLGVBQWU7QUFDbkI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQjtBQUVBO0lBQ0kscUJBQXFCO0VBQ3ZCO0FBRUE7SUFDRSxxQkFBcUI7RUFDdkI7QUFFQTtJQUNFLHFCQUFxQjtFQUN2QiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzL3Byb2R1Y3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kLWZsZXgge1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcbi5wLTIge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxuICAgIHdpZHRoOiAzMDBweDtcclxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gICAgYm94LXNoYWRvdzogMXB4IDFweCAjY2NjO1xyXG59XHJcbi5wLTIgZGl2IHtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgdGV4dC1vdmVyZmxvdzogZWxsaXBzaXM7XHJcbn1cclxuLmljb24ge1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4uZWRpdC1pY29uIHtcclxuICAgIGNvbG9yOiBkZWVwc2t5Ymx1ZTtcclxufVxyXG5cclxuLmRlbGV0ZS1pY29uIHtcclxuICAgIGNvbG9yOiBjcmltc29uO1xyXG59XHJcblxyXG50ZXh0YXJlYTppbnZhbGlkIHtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcclxuICB9XHJcblxyXG4gIGlucHV0OmludmFsaWQge1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgcmVkO1xyXG4gIH1cclxuXHJcbiAgc2VsZWN0OmludmFsaWQge1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgcmVkO1xyXG4gIH0iXX0= */";
+    __webpack_exports__["default"] = ".d-flex {\r\n    justify-content: space-between;\r\n}\r\n.p-2 {\r\n    margin-bottom: 20px;\r\n    width: 300px;\r\n    background: white;\r\n    box-shadow: 1px 1px #ccc;\r\n}\r\n.p-2 div {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n}\r\n.icon {\r\n    float: right;\r\n    padding: 5px;\r\n    cursor: pointer;\r\n}\r\n.edit-icon {\r\n    color: deepskyblue;\r\n}\r\n.delete-icon {\r\n    color: crimson;\r\n}\r\n.required {\r\n    color: red;\r\n  }\r\ntextarea:invalid {\r\n    border: 2px solid #bac8f3;\r\n  }\r\ninput:invalid {\r\n    border: 2px solid #bac8f3;\r\n  }\r\nselect:invalid {\r\n    border: 2px solid #bac8f3;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksOEJBQThCO0FBQ2xDO0FBQ0E7SUFDSSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQix3QkFBd0I7QUFDNUI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osWUFBWTtJQUNaLGVBQWU7QUFDbkI7QUFFQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUVBO0lBQ0ksY0FBYztBQUNsQjtBQUVBO0lBQ0ksVUFBVTtFQUNaO0FBRUY7SUFDSSx5QkFBeUI7RUFDM0I7QUFFQTtJQUNFLHlCQUF5QjtFQUMzQjtBQUVBO0lBQ0UseUJBQXlCO0VBQzNCIiwiZmlsZSI6InNyYy9hcHAvcHJvZHVjdHMvcHJvZHVjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmQtZmxleCB7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbn1cclxuLnAtMiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG4gICAgd2lkdGg6IDMwMHB4O1xyXG4gICAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgICBib3gtc2hhZG93OiAxcHggMXB4ICNjY2M7XHJcbn1cclxuLnAtMiBkaXYge1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICB0ZXh0LW92ZXJmbG93OiBlbGxpcHNpcztcclxufVxyXG4uaWNvbiB7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbiAgICBwYWRkaW5nOiA1cHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi5lZGl0LWljb24ge1xyXG4gICAgY29sb3I6IGRlZXBza3libHVlO1xyXG59XHJcblxyXG4uZGVsZXRlLWljb24ge1xyXG4gICAgY29sb3I6IGNyaW1zb247XHJcbn1cclxuXHJcbi5yZXF1aXJlZCB7XHJcbiAgICBjb2xvcjogcmVkO1xyXG4gIH1cclxuXHJcbnRleHRhcmVhOmludmFsaWQge1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgI2JhYzhmMztcclxuICB9XHJcblxyXG4gIGlucHV0OmludmFsaWQge1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgI2JhYzhmMztcclxuICB9XHJcblxyXG4gIHNlbGVjdDppbnZhbGlkIHtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkICNiYWM4ZjM7XHJcbiAgfSJdfQ== */";
     /***/
   },
 
@@ -2086,27 +2236,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ProductsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this12 = this;
+          var _this18 = this;
 
           this.loading = true;
           this.toastrService.success("Welcome to Products Page");
           this.categoryService.getCategories().subscribe(function (res) {
-            _this12.categories = res.data;
+            _this18.categories = res.data;
           }, function (err) {
             console.log(err);
           });
           setTimeout(function () {
-            _this12.loading = false;
+            _this18.loading = false;
           }, 2500);
         }
       }, {
         key: "getProducts",
         value: function getProducts(e) {
-          var _this13 = this;
+          var _this19 = this;
 
           var categoryid = e.target.value;
           this.productService.getProducts(categoryid).subscribe(function (res) {
-            _this13.products = res.data;
+            _this19.products = res.data;
           }, function (err) {
             console.log(err);
           });
@@ -2114,10 +2264,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "getSubCategory",
         value: function getSubCategory(id) {
-          var _this14 = this;
+          var _this20 = this;
 
           this.categoryService.getSubCategory(id).subscribe(function (res) {
-            _this14.subCategories = res.data;
+            _this20.subCategories = res.data;
           }, function (err) {
             console.log(err);
           });
@@ -2125,7 +2275,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "updateProductFun",
         value: function updateProductFun() {
-          var _this15 = this;
+          var _this21 = this;
 
           var updatedProduct = {
             "title": this.title,
@@ -2137,37 +2287,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             "measurements": this.measurements,
             "description": this.description
           };
-          this.productService.updateProduct(this.productId, updatedProduct).subscribe(function (res) {
-            _this15.toastrService.success("Product Updated Successfully");
 
-            var result = _this15.products.filter(function (data) {
+          if (!this.title || !this.categoryid || !this.subcategoryid || !this.price || !this.description) {
+            alert("Please fill out the required fields");
+            return;
+          }
+
+          this.productService.updateProduct(this.productId, updatedProduct).subscribe(function (res) {
+            _this21.toastrService.success("Product Updated Successfully");
+
+            var result = _this21.products.filter(function (data) {
               return data._id == this.productId && data.categoryid == this.categoryId;
             });
 
-            _this15.products = result;
+            _this21.products = result;
           }, function (err) {
             console.log(err);
 
-            _this15.toastrService.error(err);
+            _this21.toastrService.error(err);
           });
         }
       }, {
         key: "deleteProductFun",
         value: function deleteProductFun() {
-          var _this16 = this;
+          var _this22 = this;
 
           this.productService.deleteProduct(this.productId).subscribe(function (res) {
-            _this16.toastrService.success("Product Deleted Successfully");
+            _this22.toastrService.success("Product Deleted Successfully");
 
-            var result = _this16.products.filter(function (data) {
+            var result = _this22.products.filter(function (data) {
               return data._id != this.productId;
             });
 
-            _this16.products = result;
+            _this22.products = result;
           }, function (err) {
             console.log(err);
 
-            _this16.toastrService.error(err);
+            _this22.toastrService.error(err);
           });
         }
       }, {
@@ -2317,28 +2473,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(CategoryService, [{
         key: "getCategories",
         value: function getCategories() {
-          var _this17 = this;
+          var _this23 = this;
 
           return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this17.log("fetched Categories");
+            return _this23.log("fetched Categories");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
         }
       }, {
         key: "getSubCategory",
         value: function getSubCategory(id) {
-          var _this18 = this;
+          var _this24 = this;
 
           return this.http.get(this.serviceUrl + "admin/subcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this18.log("fetched Category");
+            return _this24.log("fetched Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategory", [])));
         }
       }, {
         key: "getSubChildCategory",
         value: function getSubChildCategory(id) {
-          var _this19 = this;
+          var _this25 = this;
 
           return this.http.get(this.serviceUrl + "admin/subchildcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this19.log("fetched Sub Child Category");
+            return _this25.log("fetched Sub Child Category");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubChildCategory", [])));
         }
       }, {
@@ -2370,14 +2526,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this20 = this;
+          var _this26 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this20.log("".concat(operation, " failed: ").concat(error.message));
+            _this26.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2485,14 +2641,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this21 = this;
+          var _this27 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this21.log("".concat(operation, " failed: ").concat(error.message));
+            _this27.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2611,19 +2767,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SubCategoryService, [{
         key: "getCategories",
         value: function getCategories() {
-          var _this22 = this;
+          var _this28 = this;
 
           return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this22.log("fetched Categories");
+            return _this28.log("fetched Categories");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
         }
       }, {
         key: "getSubCategories",
         value: function getSubCategories(id) {
-          var _this23 = this;
+          var _this29 = this;
 
           return this.http.get(this.serviceUrl + "admin/subcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
-            return _this23.log("fetched sub Categories");
+            return _this29.log("fetched sub Categories");
           }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubCategories", [])));
         }
       }, {
@@ -2636,9 +2792,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "updateSubCategory",
         value: function updateSubCategory(id, categoryname, value) {
-          var url = "".concat(this.serviceUrl + "admin/categories", "/").concat(id);
+          var url = "".concat(this.serviceUrl + "admin/subcategories", "/").concat(id);
           var data = {
-            categoryname: value
+            subcategoryname: value
           };
           return this.http.put(url, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
             return console.log("updated category id=".concat(id));
@@ -2655,14 +2811,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "handleError",
         value: function handleError() {
-          var _this24 = this;
+          var _this30 = this;
 
           var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
           var result = arguments.length > 1 ? arguments[1] : undefined;
           return function (error) {
             console.error(error); // log to console instead
 
-            _this24.log("".concat(operation, " failed: ").concat(error.message));
+            _this30.log("".concat(operation, " failed: ").concat(error.message));
 
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
           };
@@ -2684,6 +2840,160 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     SubCategoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], SubCategoryService);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/subchildcategories.service.ts":
+  /*!********************************************************!*\
+    !*** ./src/app/services/subchildcategories.service.ts ***!
+    \********************************************************/
+
+  /*! exports provided: SubChildCategoryService */
+
+  /***/
+  function srcAppServicesSubchildcategoriesServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SubChildCategoryService", function () {
+      return SubChildCategoryService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _config_globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../config/globals */
+    "./src/app/config/globals.ts");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+
+    var SubChildCategoryService =
+    /*#__PURE__*/
+    function () {
+      function SubChildCategoryService(http) {
+        _classCallCheck(this, SubChildCategoryService);
+
+        this.http = http;
+        this.serviceUrl = _config_globals__WEBPACK_IMPORTED_MODULE_3__["globals"].dbhosturl;
+      }
+
+      _createClass(SubChildCategoryService, [{
+        key: "getCategories",
+        value: function getCategories() {
+          var _this31 = this;
+
+          return this.http.get(this.serviceUrl + "admin/categories").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return _this31.log("fetched Categories");
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getCategories", [])));
+        }
+      }, {
+        key: "getSubCategories",
+        value: function getSubCategories(id) {
+          var _this32 = this;
+
+          return this.http.get(this.serviceUrl + "admin/subcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return _this32.log("fetched sub Categories");
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubCategories", [])));
+        }
+      }, {
+        key: "getSubChildCategories",
+        value: function getSubChildCategories(id) {
+          var _this33 = this;
+
+          return this.http.get(this.serviceUrl + "admin/subchildcategories/" + id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return _this33.log("fetched sub child Categories");
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("getSubChildCategories", [])));
+        }
+      }, {
+        key: "addSubChildCategory",
+        value: function addSubChildCategory(category) {
+          return this.http.post(this.serviceUrl + "admin/subchildcategories", category).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (prod) {
+            return console.log("added category w/ id=".concat(category.id));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("addCategory")));
+        }
+      }, {
+        key: "updateSubChildCategory",
+        value: function updateSubChildCategory(id, categoryname, value) {
+          var url = "".concat(this.serviceUrl + "admin/subchildcategories", "/").concat(id);
+          var data = {
+            subchildcategoryname: value
+          };
+          return this.http.put(url, data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return console.log("updated sub child category id=".concat(id));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("updateCategory")));
+        }
+      }, {
+        key: "deleteSubChildCategory",
+        value: function deleteSubChildCategory(id) {
+          var url = "".concat(this.serviceUrl + "admin/subchildcategories", "/").concat(id);
+          return this.http.delete(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (_) {
+            return console.log("deleted sub child category id=".concat(id));
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError("deleteCategory")));
+        }
+      }, {
+        key: "handleError",
+        value: function handleError() {
+          var _this34 = this;
+
+          var operation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "operation";
+          var result = arguments.length > 1 ? arguments[1] : undefined;
+          return function (error) {
+            console.error(error); // log to console instead
+
+            _this34.log("".concat(operation, " failed: ").concat(error.message));
+
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
+          };
+        }
+      }, {
+        key: "log",
+        value: function log(message) {
+          console.log(message);
+        }
+      }]);
+
+      return SubChildCategoryService;
+    }();
+
+    SubChildCategoryService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    SubChildCategoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], SubChildCategoryService);
     /***/
   },
 
@@ -2866,7 +3176,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(SubCategoriesComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this25 = this;
+          var _this35 = this;
 
           console.log("categories", this.api.getCategories());
           this.loadCategories();
@@ -2874,10 +3184,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             categoryid: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
             subcategoryname: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
           });
-          this.loading = true;
+          this.loading = false;
           this.toastrService.success("Welcome to Sub-Category Page");
           setTimeout(function () {
-            _this25.loading = false;
+            _this35.loading = false;
           }, 2500);
         }
       }, {
@@ -2888,16 +3198,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "onFormSubmit",
         value: function onFormSubmit() {
-          var _this26 = this;
+          var _this36 = this;
 
           this.isLoadingResults = true;
           this.api.addSubCategory(this.subCategoryFormGroup.value).subscribe(function (res) {
             var id = res._id;
             console.log("respose ", res);
-            _this26.isLoadingResults = false;
+            _this36.isLoadingResults = false;
           }, function (err) {
             console.log(err);
-            _this26.isLoadingResults = false;
+            _this36.isLoadingResults = false;
           });
         }
       }, {
@@ -2908,49 +3218,66 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.loadSubCategories(categoryId);
         }
       }, {
+        key: "updateSubCategory",
+        value: function updateSubCategory(id, property, event) {
+          var _this37 = this;
+
+          console.log("id", id, "event", event);
+          var editField = event.target.textContent;
+          this.api.updateSubCategory(id, property, editField).subscribe(function (res) {
+            var id = res._id;
+            console.log("id", id);
+            console.log("sub category updated successfully");
+            _this37.isLoadingResults = false;
+          }, function (err) {
+            console.log(err);
+            _this37.isLoadingResults = false;
+          });
+        }
+      }, {
         key: "deleteSubCategory",
         value: function deleteSubCategory(id) {
-          var _this27 = this;
+          var _this38 = this;
 
           this.api.deleteSubCategory(id).subscribe(function (res) {
             console.log("category deleted successfully");
 
-            _this27.loadSubCategories(_this27.selectedSubCategory);
+            _this38.loadSubCategories(_this38.selectedSubCategory);
 
-            _this27.isLoadingResults = false;
+            _this38.isLoadingResults = false;
           }, function (err) {
             console.log(err);
-            _this27.isLoadingResults = false;
+            _this38.isLoadingResults = false;
           });
         }
       }, {
         key: "loadCategories",
         value: function loadCategories() {
-          var _this28 = this;
+          var _this39 = this;
 
           this.api.getCategories().subscribe(function (res) {
             console.log("response", res);
             var id = res._id;
-            _this28.categories = res.data;
-            _this28.isLoadingResults = false;
+            _this39.categories = res.data;
+            _this39.isLoadingResults = false;
           }, function (err) {
             console.log(err);
-            _this28.isLoadingResults = false;
+            _this39.isLoadingResults = false;
           });
         }
       }, {
         key: "loadSubCategories",
         value: function loadSubCategories(categoryId) {
-          var _this29 = this;
+          var _this40 = this;
 
           this.api.getSubCategories(categoryId).subscribe(function (res) {
             console.log("subcategories list response", res);
             var id = res._id;
-            _this29.subcategories = res.data;
-            _this29.isLoadingResults = false;
+            _this40.subcategories = res.data;
+            _this40.isLoadingResults = false;
           }, function (err) {
             console.log(err);
-            _this29.isLoadingResults = false;
+            _this40.isLoadingResults = false;
           });
         }
       }]);

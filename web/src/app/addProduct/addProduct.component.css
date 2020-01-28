@@ -1,11 +1,19 @@
-  textarea:invalid {
-    border: 2px solid red;
-  }
+textarea:invalid {
+  border: 2px solid #bac8f3;
+}
 
-  input:invalid {
-    border: 2px solid red;
-  }
+input:invalid {
+  border: 2px solid #bac8f3;
+}
 
-  select:invalid {
-    border: 2px solid red;
-  }
+select:invalid {
+  border: 2px solid #bac8f3;
+}
+
+.required {
+  color: red;
+}
+
+.align-items-center {
+  margin-bottom: 15px;
+}
