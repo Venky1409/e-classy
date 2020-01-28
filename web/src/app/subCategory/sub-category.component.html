@@ -43,10 +43,11 @@
         </tr>
         <tr *ngFor="let subcategory of subcategories; let id = index">
           <td>
-            <span contenteditable="true">{{subcategory.categoryid}}</span>
+            <span>{{subcategory.categoryid}}</span>
           </td>
           <td>
-            <span contenteditable="true">{{subcategory.subcategoryname}}</span>
+            <span (blur)="updateSubCategory(subcategory._id, 'subcategoryname', $event)"
+              contenteditable="true">{{subcategory.subcategoryname}}</span>
           </td>
           <td>
             <span class="table-remove">

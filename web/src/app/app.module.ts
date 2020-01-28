@@ -23,6 +23,7 @@ import { from } from "rxjs";
 
 import { CategoryService } from "./services/categories.service";
 import { SubCategoryService } from "./services/subcategories.service";
+import { SubChildCategoryService } from "./services/subchildcategories.service";
 import { ProductsService } from "./services/products.service";
 
 import {
@@ -87,7 +88,12 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatToolbarModule
   ],
-  providers: [CategoryService, SubCategoryService, ProductsService],
+  providers: [
+    CategoryService,
+    SubCategoryService,
+    SubChildCategoryService,
+    ProductsService
+  ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
