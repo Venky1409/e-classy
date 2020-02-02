@@ -9,9 +9,9 @@
       <ng-content></ng-content>
     </section>
     <div class="modal-card-foot row">
-      <div>
-        <button class="button is-cancel" (click)="close('cancel', $event)">{{cancelText}}</button>
-        <button class="button is-dark" (click)="save('ok', $event)">{{saveText}}</button>
+      <div class="button-section">
+        <button type="button" class="btn btn-primary" (click)="save('ok', $event)">{{saveText}}</button>
+        <button type="button" class="btn btn-danger" (click)="close('cancel', $event)">{{cancelText}}</button>
       </div>
     </div>
   </div>

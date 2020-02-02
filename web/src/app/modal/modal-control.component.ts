@@ -9,7 +9,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class ModalControlComponent implements OnInit {
   @Input('open') openEvent: EventEmitter<any> = new EventEmitter<any>();
   @Input('title') title = '';
-  @Input('saveText') saveText = 'Ok';
+  @Input('saveText') saveText = 'Submit';
   @Input('errorCount') errorCount = true;
   @Input('cancelText') cancelText = 'Cancel';
   @Input('visible') visible = false;

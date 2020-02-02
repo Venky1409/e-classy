@@ -1,7 +1,7 @@
 <div class="overlay" *ngIf="loading">
   <div id="loading-img"></div>
 </div>
-<h2>WELCOME CATEGORY PAGE</h2>
+<h3>CATEGORIES</h3>
 <form
   [formGroup]="loginFormGroup"
   class="example-form"
@@ -39,9 +39,9 @@
 </form>
 
 <div class="card">
-  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
-    Editable table
-  </h3>
+  <p class="card-header text-center font-weight-bold text-uppercase">
+    Categories table
+  </p>
   <div class="card-body">
     <div id="table" class="table-editable">
       <span class="table-add float-right mb-3 mr-2">
@@ -68,7 +68,7 @@
 
           <td>
             <span class="table-remove">
-              <button
+              <!-- <button
                 type="button"
                 mdbBtn
                 color="danger"
@@ -78,10 +78,14 @@
                 (click)="deleteCategory(category._id)"
               >
                 Remove
-              </button>
+              </button> -->
+              <i class="fa fa-trash delete-icon icon" aria-hidden="true" (click)="deleteCategory(category._id)"></i>
             </span>
           </td>
         </tr>
+        <div *ngIf="!categories.length">
+          No data found
+        </div>
       </table>
     </div>
   </div>
