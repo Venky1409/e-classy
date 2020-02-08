@@ -71,7 +71,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div id=\"wrapper\">\r\n  <!-- <app-side-bar class=\"sidebar\"></app-side-bar> -->\r\n  <app-topnav></app-topnav>\r\n  \r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <!-- <app-header></app-header> -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n    <div toastContainer></div>\r\n  </div>\r\n</div>\r\n  ";
+    __webpack_exports__["default"] = "<div id=\"wrapper\">\r\n  <!-- <app-side-bar class=\"sidebar\"></app-side-bar> -->\r\n  <app-topnav></app-topnav>\r\n  \r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <!-- <app-header></app-header> -->\r\n      <div class=\"container pl-0 pr-0\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n    <div toastContainer></div>\r\n  </div>\r\n</div>\r\n  ";
     /***/
   },
 
@@ -176,6 +176,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.component.html":
+  /*!**************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.component.html ***!
+    \**************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppLandingLandingComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<img src=\"assets/images/banner1.jpg\" class=\"img-fluid\" alt=\"Banner\" width=\"100%\">\n<!-- <img width=\"1020\" height=\"329\"\n        src=\"https://i2.wp.com/stayclassy.in/wp-content/uploads/2020/01/Webp.net-compress-image4.jpg?resize=1020%2C329&amp;ssl=1\"\n        class=\"attachment-original size-original wp-post-image\" alt=\"\"\n        srcset=\"https://i2.wp.com/stayclassy.in/wp-content/uploads/2020/01/Webp.net-compress-image4.jpg?w=1024&amp;ssl=1 1024w, https://i2.wp.com/stayclassy.in/wp-content/uploads/2020/01/Webp.net-compress-image4.jpg?resize=300%2C97&amp;ssl=1 300w, https://i2.wp.com/stayclassy.in/wp-content/uploads/2020/01/Webp.net-compress-image4.jpg?resize=768%2C248&amp;ssl=1 768w, https://i2.wp.com/stayclassy.in/wp-content/uploads/2020/01/Webp.net-compress-image4.jpg?resize=510%2C164&amp;ssl=1 510w\"\n        sizes=\"(max-width: 1020px) 100vw, 1020px\"> -->";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/modal/modal-control.component.html":
   /*!******************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/modal/modal-control.component.html ***!
@@ -271,7 +291,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"site-header\">\n    <div class=\"row ml-0 mr-0\">\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Contact Us</a>\n            <a class=\"ec-a ml-3\" href=\"#\">FAQs</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Track Order</a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"navbar-brand\" href=\"#\">\n                <img src=\"logo.png\" alt=\"Logo\">\n            </a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Register</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Login</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Cart (0)</a>\n        </div>\n    </div>\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand d-lg-none\" href=\"#\">\n            <img height=\"20px\" src=\"logo.png\" alt=\"Logo\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample08\"\n            aria-controls=\"navbarsExample08\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse justify-content-md-center\" id=\"navbarsExample08\">\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item active\">\n                    <a class=\"nav-link\" href=\"#\">Mobile Covers</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">T-Shirts</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Mugs</a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown08\" data-toggle=\"dropdown\"\n                        aria-haspopup=\"true\" aria-expanded=\"false\">Customized Covers</a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdown08\">\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </nav>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"site-header\">\n    <div class=\"row ml-0 mr-0\">\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Contact Us</a>\n            <a class=\"ec-a ml-3\" href=\"#\">FAQs</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Track Order</a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"navbar-brand\" href=\"#\">\n                <img src=\"assets/images/logo.png\" alt=\"Logo\">\n            </a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Register</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Login</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Cart (0)</a>\n        </div>\n    </div>\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand d-lg-none\" href=\"#\">\n            <img height=\"20px\" src=\"assets/images/logo.png\" alt=\"Logo\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample08\"\n            aria-controls=\"navbarsExample08\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse justify-content-md-center\" id=\"navbarsExample08\">\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item active\">\n                    <a class=\"nav-link\" href=\"#\">Mobile Covers</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">T-Shirts</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Mugs</a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown08\" data-toggle=\"dropdown\"\n                        aria-haspopup=\"true\" aria-expanded=\"false\">Customized Covers</a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdown08\">\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </nav>\n</div>";
     /***/
   },
 
@@ -1269,10 +1289,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _topnav_topnav_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
     /*! ./topnav/topnav.component */
     "./src/app/topnav/topnav.component.ts");
+    /* harmony import */
+
+
+    var _landing_landing_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! ./landing/landing.component */
+    "./src/app/landing/landing.component.ts");
 
     var appRoutes = [{
       path: "",
-      component: _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]
+      component: _landing_landing_component__WEBPACK_IMPORTED_MODULE_25__["LandingComponent"]
     }, {
       path: "categories",
       component: _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"]
@@ -1295,7 +1321,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _subCategory_sub_category_component__WEBPACK_IMPORTED_MODULE_13__["SubCategoriesComponent"], _childCategory_sub_child_category_component__WEBPACK_IMPORTED_MODULE_14__["SubChildCategoriesComponent"], _products_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductsComponent"], _addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_16__["AddProductsComponent"], _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__["ModalControlComponent"], _topnav_topnav_component__WEBPACK_IMPORTED_MODULE_24__["TopnavComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_8__["SidebarComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"], _categories_categories_component__WEBPACK_IMPORTED_MODULE_11__["CategoriesComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _subCategory_sub_category_component__WEBPACK_IMPORTED_MODULE_13__["SubCategoriesComponent"], _childCategory_sub_child_category_component__WEBPACK_IMPORTED_MODULE_14__["SubChildCategoriesComponent"], _products_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductsComponent"], _addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_16__["AddProductsComponent"], _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__["ModalControlComponent"], _topnav_topnav_component__WEBPACK_IMPORTED_MODULE_24__["TopnavComponent"], _landing_landing_component__WEBPACK_IMPORTED_MODULE_25__["LandingComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_18__["RouterModule"].forRoot(appRoutes, {
         useHash: true
       }), ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot({
@@ -2025,6 +2051,85 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /*! ./home.component.css */
       "./src/app/home/home.component.css")).default]
     })], HomeComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/landing/landing.component.css":
+  /*!***********************************************!*\
+    !*** ./src/app/landing/landing.component.css ***!
+    \***********************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppLandingLandingComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xhbmRpbmcvbGFuZGluZy5jb21wb25lbnQuY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/landing/landing.component.ts":
+  /*!**********************************************!*\
+    !*** ./src/app/landing/landing.component.ts ***!
+    \**********************************************/
+
+  /*! exports provided: LandingComponent */
+
+  /***/
+  function srcAppLandingLandingComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LandingComponent", function () {
+      return LandingComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var LandingComponent =
+    /*#__PURE__*/
+    function () {
+      function LandingComponent() {
+        _classCallCheck(this, LandingComponent);
+      }
+
+      _createClass(LandingComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return LandingComponent;
+    }();
+
+    LandingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-landing',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./landing.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/landing/landing.component.html")).default,
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./landing.component.css */
+      "./src/app/landing/landing.component.css")).default]
+    })], LandingComponent);
     /***/
   },
 
