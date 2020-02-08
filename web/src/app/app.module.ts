@@ -39,6 +39,7 @@ import {
   MatMenuModule,
   MatToolbarModule
 } from "@angular/material";
+import { TopnavComponent } from './topnav/topnav.component';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -61,7 +62,8 @@ const appRoutes: Routes = [
     SubChildCategoriesComponent,
     ProductsComponent,
     AddProductsComponent,
-    ModalControlComponent
+    ModalControlComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule,

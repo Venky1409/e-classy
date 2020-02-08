@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"wrapper\">\r\n  <app-side-bar class=\"sidebar\"></app-side-bar>\r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <app-header></app-header>\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n    <div toastContainer></div>\r\n  </div>\r\n</div>\r\n  ");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"wrapper\">\r\n  <!-- <app-side-bar class=\"sidebar\"></app-side-bar> -->\r\n  <app-topnav></app-topnav>\r\n  \r\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n    <div id=\"content\">\r\n      <!-- <app-header></app-header> -->\r\n      <div class=\"container-fluid\">\r\n        <router-outlet></router-outlet>\r\n      </div>\r\n    </div>\r\n    <app-footer></app-footer>\r\n    <div toastContainer></div>\r\n  </div>\r\n</div>\r\n  ");
 
 /***/ }),
 
@@ -163,6 +163,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"overlay\" *ngIf=\"loading\">\r\n  <div id=\"loading-img\"></div>\r\n</div>\r\n<h2>WELCOME SUB-CATEGORY PAGE</h2>\r\n<form id=\"subCategory\" fxLayout=\"column\" [formGroup]=\"subCategoryFormGroup\" class=\"example-form\"\r\n  (ngSubmit)=\"onFormSubmit()\">\r\n\r\n  <div class=\"input-row\">\r\n    <mat-form-field>\r\n      <select formControlName=\"categoryid\" (ngModelChange)=\"onCategorySelection(selectField.value)\" #selectField>\r\n        <option value=\"\">Select Category</option>\r\n        <option *ngFor=\"let category of categories\" value={{category._id}}>{{category.categoryname}}</option>\r\n      </select>\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"input-row\">\r\n    <mat-form-field class=\"example-full-width\">\r\n      <input matInput placeholder=\"Sub-Category Name\" formControlName=\"subcategoryname\" [errorStateMatcher]=\"matcher\"\r\n        required />\r\n    </mat-form-field>\r\n  </div>\r\n  <div class=\"d-save-button d-buttons\">\r\n    <button mat-button class=\"mat-raised-button mat-button-base\" color=\"primary\"\r\n      [disabled]=\"!subCategoryFormGroup.valid\" type=\"submit\">\r\n      Save\r\n    </button>\r\n  </div>\r\n</form>\r\n<div class=\"card\">\r\n  <h3 class=\"card-header text-center font-weight-bold text-uppercase py-4\">Editable table</h3>\r\n  <div class=\"card-body\">\r\n    <div id=\"table\" class=\"table-editable\">\r\n      <span class=\"table-add float-right mb-3 mr-2\">\r\n        <a class=\"text-success\" (click)=\"add()\">\r\n          <mdb-icon fas icon=\"plus\" size=\"2x\"></mdb-icon>\r\n        </a>\r\n      </span>\r\n      <table class=\"table table-bordered table-responsive-md table-striped text-center\">\r\n        <tr>\r\n          <th class=\"text-center\">Category Name</th>\r\n          <th class=\"text-center\">Sub-Category Name</th>\r\n          <th class=\"text-center\">Remove</th>\r\n        </tr>\r\n        <tr *ngFor=\"let subcategory of subcategories; let id = index\">\r\n          <td>\r\n            <span>{{subcategory.categoryid}}</span>\r\n          </td>\r\n          <td>\r\n            <span (blur)=\"updateSubCategory(subcategory._id, 'subcategoryname', $event)\"\r\n              contenteditable=\"true\">{{subcategory.subcategoryname}}</span>\r\n          </td>\r\n          <td>\r\n            <span class=\"table-remove\">\r\n              <button type=\"button\" mdbBtn color=\"danger\" rounded=\"true\" size=\"sm\" class=\"my-0\"\r\n                (click)=\"deleteSubCategory(subcategory._id)\">Remove</button>\r\n            </span>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/topnav/topnav.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/topnav/topnav.component.html ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"site-header\">\n    <div class=\"row ml-0 mr-0\">\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Contact Us</a>\n            <a class=\"ec-a ml-3\" href=\"#\">FAQs</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Track Order</a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"navbar-brand\" href=\"#\">\n                <img src=\"logo.png\" alt=\"Logo\">\n            </a>\n        </div>\n        <div class=\"col-xs-4 col-md-12 col-lg-4 text-center\">\n            <a class=\"ec-a ml-3\" href=\"#\">Register</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Login</a>\n            <a class=\"ec-a ml-3\" href=\"#\">Cart (0)</a>\n        </div>\n    </div>\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand d-lg-none\" href=\"#\">\n            <img height=\"20px\" src=\"logo.png\" alt=\"Logo\">\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample08\"\n            aria-controls=\"navbarsExample08\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse justify-content-md-center\" id=\"navbarsExample08\">\n            <ul class=\"navbar-nav\">\n                <li class=\"nav-item active\">\n                    <a class=\"nav-link\" href=\"#\">Mobile Covers</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">T-Shirts</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" href=\"#\">Mugs</a>\n                </li>\n                <li class=\"nav-item dropdown\">\n                    <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"dropdown08\" data-toggle=\"dropdown\"\n                        aria-haspopup=\"true\" aria-expanded=\"false\">Customized Covers</a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdown08\">\n                        <a class=\"dropdown-item\" href=\"#\">Action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Another action</a>\n                        <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </nav>\n</div>");
 
 /***/ }),
 
@@ -595,6 +608,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_subchildcategories_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/subchildcategories.service */ "./src/app/services/subchildcategories.service.ts");
 /* harmony import */ var _services_products_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/products.service */ "./src/app/services/products.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _topnav_topnav_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./topnav/topnav.component */ "./src/app/topnav/topnav.component.ts");
+
 
 
 
@@ -643,7 +658,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _childCategory_sub_child_category_component__WEBPACK_IMPORTED_MODULE_14__["SubChildCategoriesComponent"],
             _products_product_component__WEBPACK_IMPORTED_MODULE_15__["ProductsComponent"],
             _addProduct_addProduct_component__WEBPACK_IMPORTED_MODULE_16__["AddProductsComponent"],
-            _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__["ModalControlComponent"]
+            _modal_modal_control_component__WEBPACK_IMPORTED_MODULE_17__["ModalControlComponent"],
+            _topnav_topnav_component__WEBPACK_IMPORTED_MODULE_24__["TopnavComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -1864,6 +1880,50 @@ SubCategoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/topnav/topnav.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/topnav/topnav.component.css ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("body {\r\n  /* font-family: Arial, Helvetica, sans-serif; */\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-size: 14px !important;\r\n}\r\n\r\na {\r\n  font-size: 14px !important;\r\n}\r\n\r\n.navbar {\r\n  background-color: #f55c94 !important;\r\n}\r\n\r\n.navbar-dark,\r\n.navbar-nav,\r\n.nav-link {\r\n  color: #fff !important;\r\n}\r\n\r\n.ec-a {\r\n  color: #f55c94;\r\n  text-decoration: none;\r\n}\r\n\r\n.ec-a:hover {\r\n  color: #f55c94;\r\n  text-decoration: none;\r\n  font-weight: bold;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9wbmF2L3RvcG5hdi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsK0NBQStDO0VBQy9DLHFDQUFxQztFQUNyQywwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSwwQkFBMEI7QUFDNUI7O0FBRUE7RUFDRSxvQ0FBb0M7QUFDdEM7O0FBRUE7OztFQUdFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QscUJBQXFCO0VBQ3JCLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL3RvcG5hdi90b3BuYXYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xyXG4gIC8qIGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyAqL1xyXG4gIGZvbnQtZmFtaWx5OiBcIk1vbnRzZXJyYXRcIiwgc2Fucy1zZXJpZjtcclxuICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcclxufVxyXG5cclxuYSB7XHJcbiAgZm9udC1zaXplOiAxNHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5uYXZiYXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmNTVjOTQgIWltcG9ydGFudDtcclxufVxyXG5cclxuLm5hdmJhci1kYXJrLFxyXG4ubmF2YmFyLW5hdixcclxuLm5hdi1saW5rIHtcclxuICBjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4uZWMtYSB7XHJcbiAgY29sb3I6ICNmNTVjOTQ7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcblxyXG4uZWMtYTpob3ZlciB7XHJcbiAgY29sb3I6ICNmNTVjOTQ7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/topnav/topnav.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/topnav/topnav.component.ts ***!
+  \********************************************/
+/*! exports provided: TopnavComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopnavComponent", function() { return TopnavComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let TopnavComponent = class TopnavComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+TopnavComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-topnav',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./topnav.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/topnav/topnav.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./topnav.component.css */ "./src/app/topnav/topnav.component.css")).default]
+    })
+], TopnavComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1932,7 +1992,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Scripters\e-classy\web\src\main.ts */"./src/main.ts");
 
 
 /***/ })
