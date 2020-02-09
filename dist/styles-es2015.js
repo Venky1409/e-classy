@@ -414,9 +414,9 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Scripters\e-classy\web\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
-__webpack_require__(/*! C:\Scripters\e-classy\web\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
-module.exports = __webpack_require__(/*! C:\Scripters\e-classy\web\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
+module.exports = __webpack_require__(/*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\src\styles.css */"./src/styles.css");
 
 
 /***/ })

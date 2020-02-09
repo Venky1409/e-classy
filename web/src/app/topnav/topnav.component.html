@@ -1,13 +1,13 @@
 <div class="site-header">
     <div class="row ml-0 mr-0">
-        <div class="col-xs-4 col-md-12 col-lg-4 text-center">
+        <div class="col-xs-4 col-md-12 col-lg-4 text-center d-none d-xl-block">
             <a class="ec-a ml-3" href="#">Contact Us</a>
             <a class="ec-a ml-3" href="#">FAQs</a>
             <a class="ec-a ml-3" href="#">Track Order</a>
         </div>
-        <div class="col-xs-4 col-md-12 col-lg-4 text-center">
+        <div class="col-xs-4 col-md-12 col-lg-4 text-center d-none d-xl-block">
             <a class="navbar-brand" href="#">
-                <img src="src/assets/images/logo.png" alt="Logo">
+                <img src="assets/images/logo.png" alt="Logo">
             </a>
         </div>
         <div class="col-xs-4 col-md-12 col-lg-4 text-center">
@@ -18,7 +18,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand d-lg-none" href="#">
-            <img height="20px" src="src/assets/images/logo.png" alt="Logo">
+            <img height="20px" src="assets/images/logo.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
             aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,6 +43,17 @@
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Admin Portal</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown08">
+                        <a class="dropdown-item" routerLink="/categories">Categories</a>
+                        <a class="dropdown-item" routerLink="/subcategories">Sub Categories</a>
+                        <a class="dropdown-item" routerLink="/childcategories">Sub Child Categories</a>
+                        <a class="dropdown-item" routerLink="/products">Products</a>
+                        <a class="dropdown-item" routerLink="/addProducts">Add Product</a>
                     </div>
                 </li>
             </ul>

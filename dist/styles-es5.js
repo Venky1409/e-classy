@@ -447,15 +447,15 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! C:\Scripters\e-classy\web\node_modules\bootstrap\dist\css\bootstrap.css */
+    /*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\node_modules\bootstrap\dist\css\bootstrap.css */
     "./node_modules/bootstrap/dist/css/bootstrap.css");
 
     __webpack_require__(
-    /*! C:\Scripters\e-classy\web\node_modules\ngx-toastr\toastr.css */
+    /*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\node_modules\ngx-toastr\toastr.css */
     "./node_modules/ngx-toastr/toastr.css");
 
     module.exports = __webpack_require__(
-    /*! C:\Scripters\e-classy\web\src\styles.css */
+    /*! C:\Venkatesh_Adigicherla\Projects\e-classy\web\src\styles.css */
     "./src/styles.css");
     /***/
   }
